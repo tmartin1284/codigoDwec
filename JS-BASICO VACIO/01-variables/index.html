@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+    <script type="text/javascript">
+    //el alcance de las variables
+    //var es accesible desde cualquier scope (entorno)
+    //let y const son solo visibles en el scope donde están definidas
+    //const no puede modificar su valor
+
+    let i = 30
+
+    if (true) //dentro del if es otro scope
+    {
+        let i = 20  //solo en el ámbito del if
+    }
+
+    console.log(i)
+
+    const BOOLEANO = true
+
+    BOOLEANO = false
+
+
+
+   
+    
+    </script>
+</body>
+</html>

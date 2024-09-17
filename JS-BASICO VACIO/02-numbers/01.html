@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones con numbers
+    </title>
+</head>
+<body>
+    <script type="text/javascript">
+    
+    const num1 = 4;
+    const num2 = 20;
+    const str1 = "algo";
+    
+    //typeof
+
+    console.log(typeof num1);
+  
+    //NaN
+   
+    const mult =  num1 * str1;
+    console.log(mult);
+    console.log(typeof mult);
+
+    //Infinity
+
+    const division = 45 / 0;
+    console.log(division);
+    console.log(typeof division);
+  
+    //isNaN()
+    
+    const numberstring = "30";
+    const string = "20 años";
+
+    console.log(isNaN(mult));
+    console.log(isNaN(division));
+
+
+    console.log(isNaN("12"));
+    console.log(typeof "12")
+    console.log(isNaN(12));
+    console.log(isNaN(numberstring));
+    console.log(isNaN(string));
+    console.log(isNaN(NaN));
+
+    //toString
+
+    const number = 100;
+    console.log(number);
+    console.log(number.toString());
+    console.log(typeof number);
+    console.log(typeof number.toString());
+
+    //toFixed
+
+    const total = 234.541556;
+    console.log(total.toFixed(2));
+ 
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones con cadenas</title>
+</head>
+<body>
+
+    <script>
+    /*
+     *  Operaciones con cadenas de texto
+     */
+ 
+    //Concatenar texto
+    let nombre = "Pepe";
+    let apellido = "Ramirez";
+    let nombre_completo = nombre + ' ' + apellido;
+    console.log(nombre_completo);
+    
+    //Template literals
+    let curso = 'S2DAW';
+    combre_completo = `${nombre} ${apellido}`; 
+
+    let saludo = `Hola ${nombre} ${apellido}, bienvenido al curso de ${curso}`;
+
+    console.log(saludo);
+
+    //typeof
+    
+    console.log(typeof saludo);
+
+    //.lenght
+    
+    console.log(nombre.length);
+
+    //.includes(subcadena)  --> devuelve booleano que dice si está o no una subcadena
+    
+    console.log(saludo.includes('bien345534'));
+
+    //.slice(start, end)
+
+    console.log(saludo.slice(12,17));
+
+    //.replace("este texto", "por este otro")
+    console.log(saludo.replace('Pepe','Manolo'));
+    //.trim()
+    let cadena = '         hola    mundo       '
+    console.log(cadena.trim());
+
+    </script>
+</body>
+</html>
