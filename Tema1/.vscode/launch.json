@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        
+        
+
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "index.html",
+            "file": "c:\\Users\\Tomás\\javascript\\Ejemplo 1\\prueba\\index.html"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "index2.html",
+            "file": "c:\\Users\\Tomás\\javascript\\Ejemplo 1\\prueba\\index2.html"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "index3.html",
+            "file": "c:\\Users\\Tomás\\javascript\\Ejemplo 1\\prueba\\index3.html"
+        }
+
+
+
+
+    ]
+}
