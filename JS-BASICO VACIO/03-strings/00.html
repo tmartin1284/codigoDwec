@@ -1,54 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Operaciones con cadenas</title>
 </head>
+
 <body>
 
     <script>
-    /*
-     *  Operaciones con cadenas de texto
-     */
- 
-    //Concatenar texto
-    let nombre = "Pepe";
-    let apellido = "Ramirez";
-    let nombre_completo = nombre + ' ' + apellido;
-    console.log(nombre_completo);
-    
-    //Template literals
-    let curso = 'S2DAW';
-    combre_completo = `${nombre} ${apellido}`; 
+        /*
+         *  Operaciones con cadenas de texto
+         */
 
-    let saludo = `Hola ${nombre} ${apellido}, bienvenido al curso de ${curso}`;
+        //Concatenar texto
+        let nombre = "Pepe";
+        let apellido = 'Ramirez';
+        let nombre_completo = nombre + ' ' + apellido;
+        console.log(nombre_completo);  //"Pepe Ramirez"
 
-    console.log(saludo);
+        // Concatenación
+        let saludo2 = 'Hola' + ' mundo';  // 'Hola mundo'
 
-    //typeof
-    
-    console.log(typeof saludo);
+        // Operaciones de Comparación
+        //igualdad
+        console.log('Hola' == 'Hola');  // true
+        console.log('Hola' != 'Mundo');  //true
+        //igualdad estricta
+        console.log('Hola' === 'Hola');  // true
+        console.log('123' === 132);  // false
+        // true
 
-    //.lenght
-    
-    console.log(nombre.length);
+        // Otros métodos útiles
+        console.log(saludo2.length);  // 10
+        console.log(saludo2.toUpperCase());  // 'HOLA MUNDO'
+        console.log(saludo2.toLowerCase());  // 'hola mundo'
+        console.log(saludo2.includes('mundo'));  // true
+        console.log(saludo2.split(' '));  // ['Hola', 'mundo']
+        console.log(saludo2.substring(1, 4));  // 'ola'  substring(inicio, fin+1)
+        console.log(saludo2.charAt(1));  // 'o'
+        console.log(saludo2.indexOf('m'));  // 5
+        console.log(saludo2.replace('mundo', 'todos'));  // 'Hola todos'
+        console.log('   Hola mundo   '.trim());  // 'Hola mundo'
 
-    //.includes(subcadena)  --> devuelve booleano que dice si está o no una subcadena
-    
-    console.log(saludo.includes('bien345534'));
+        //Template literals
+        let curso = 'S2DAW';
+        nombre_completo = `${nombre} ${apellido}`;
 
-    //.slice(start, end)
+        let saludo = `Hola ${nombre} ${apellido}, bienvenido al curso de ${curso}`;
 
-    console.log(saludo.slice(12,17));
+        console.log(saludo); //Hola Pepe Ramirez, bienvenido al curso de S2DAW
 
-    //.replace("este texto", "por este otro")
-    console.log(saludo.replace('Pepe','Manolo'));
-    //.trim()
-    let cadena = '         hola    mundo       '
-    console.log(cadena.trim());
+        //typeof
+        console.log(typeof saludo);  //string
+
+        //.lenght
+        console.log(nombre.length); // lo que mida la cadena... no lo he contado
+
+        //.includes(subcadena)  --> devuelve booleano que dice si está o no una subcadena
+        console.log(saludo.includes('bien345534')); //falso
+
+        //.slice(start, end)
+        console.log(saludo.slice(12, 17));
+
+        //.replace("este texto", "por este otro")
+        console.log(saludo.replace('Pepe', 'Manolo'));  //Manolo... mi Manolo, ayy mi Manolo
+
+        //.trim()
+        let cadena = '         hola    mundo       '
+        console.log(cadena.trim());    //"hola mundo"   -->sin los caracteres iniciales y finales
+
+
+
 
     </script>
 </body>
+
 </html>
