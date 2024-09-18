@@ -38,7 +38,7 @@
         console.log(saludo2.toUpperCase());  // 'HOLA MUNDO'
         console.log(saludo2.toLowerCase());  // 'hola mundo'
         console.log(saludo2.includes('mundo'));  // true
-        console.log(saludo2.split(' '));  // ['Hola', 'mundo']
+        console.log(saludo2.split(' '));  // ['Hola', 'mundo']  --> ojo, nos devuelve un array de string
         console.log(saludo2.substring(1, 4));  // 'ola'  substring(inicio, fin+1)
         console.log(saludo2.charAt(1));  // 'o'
         console.log(saludo2.indexOf('m'));  // 5
@@ -57,13 +57,13 @@
         console.log(typeof saludo);  //string
 
         //.lenght
-        console.log(nombre.length); // lo que mida la cadena... no lo he contado
+        console.log(nombre.length); //4 
 
         //.includes(subcadena)  --> devuelve booleano que dice si está o no una subcadena
         console.log(saludo.includes('bien345534')); //falso
 
         //.slice(start, end)
-        console.log(saludo.slice(12, 17));
+        console.log(saludo.slice(12, 17));  //mirez --> ha cogido solo un cacho del string
 
         //.replace("este texto", "por este otro")
         console.log(saludo.replace('Pepe', 'Manolo'));  //Manolo... mi Manolo, ayy mi Manolo
