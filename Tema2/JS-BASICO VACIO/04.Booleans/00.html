@@ -1,42 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Javascript: Booleans</title>
-    </head>
-    <body>
-        <script type="text/javascript">
-            /*
-             * Es el momento de gestionar booleans
-             */
-            // True (Verdadero) todas las siguientes son true
-            // 1
-            // "Whatever"
-            // 3.14
-            // 100 > 5
-            // 1 < 100
-            // '1' == 1
-            console.log(Boolean(1))
-            console.log(Boolean('Whatever'))
-            console.log(Boolean(3.14))
-            console.log(Boolean(100 > 5))
-            console.log(Boolean(1 < 100))
-            console.log(Boolean('1' == 1))
 
-            // False (Falso)  todas las siguientes son false
-            // 0, -0
-            // ""
-            // NaN
-            // null
-            // undefined
-            // '1' === 1
-            console.log(Boolean(0))
-            console.log(Boolean(-0))
-            console.log(Boolean(''))
-            console.log(Boolean(NaN))
-            console.log(Boolean(null))
-            console.log(Boolean(undefined))
-            console.log(Boolean('1' === 1))
-        </script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript: Booleans</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        /*
+         * Es el momento de gestionar booleans
+         */
+        // True (Verdadero) todas las siguientes son true
+        // 1
+        // "Whatever"
+        // 3.14
+        // 100 > 5
+        // 1 < 100
+        // '1' == 1
+        console.log(Boolean(1))
+        console.log(Boolean('Whatever'))
+        console.log(Boolean(3.14))
+        console.log(Boolean(100 > 5))
+        console.log(Boolean(1 < 100))
+        console.log(Boolean('1' == 1))
+
+        // False (Falso)  todas las siguientes son false
+        // 0, -0
+        // ""
+        // NaN
+        // null
+        // undefined
+        // '1' === 1
+        console.log(Boolean(0))
+        console.log(Boolean(-0))
+        console.log(Boolean(''))
+        console.log(Boolean(NaN))
+        console.log(Boolean(null))
+        console.log(Boolean(undefined))
+        console.log(Boolean('1' === 1))
+
+        
+
+        // Example 1: Using Boolean() to get the boolean value
+        console.log(Boolean(1));           // true
+        console.log(Boolean(0));           // false
+        console.log(Boolean("Whatever"));  // true
+        console.log(Boolean(""));          // false
+
+        // Example 2: Using expressions
+        console.log(100 > 5);              // true
+        console.log(1 < 100);              // true
+        console.log('1' == 1);             // true
+        console.log('1' === 1);            // false
+
+        // Example 3: Checking for undefined and null
+        let a;
+        console.log(Boolean(a));           // false
+
+        let b = null;
+        console.log(Boolean(b));           // false
+
+        // Example 4: NaN check
+        let c = NaN;
+        console.log(Boolean(c));           // false
+        console.log(isNaN(c));             // true
+
+        // Example 5: Combining multiple checks
+        let value = "Hello";
+        if (value && typeof value === "string") {
+            console.log("Value is a non-empty string"); // This will log
+        }
+
+        let number = 0;
+        if (!number) {
+            console.log("Number is zero or false"); // This will log
+        }
+
+
+
+
+    </script>
+</body>
+
 </html>
