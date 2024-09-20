@@ -1,0 +1,3 @@
+/*Crea un array de varios objetos persona
+crea un bucle que recorra el array de objetos con otro bucle 
+anidado que recorra las propiedades de cada objeto*/

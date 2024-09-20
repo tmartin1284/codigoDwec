@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+    <script type="text/javascript">
+    
+
+    const a1 = new Array(); // Nuevo array vacío
+console.log(a1.length); // Salida: 0
+
+const a2 = new Array(4); // Nuevo array con 4 elementos
+console.log(a2.length); // Salida: 4
+
+// Nuevo array con 3 elementos definidos
+const artist = new Array('Michael Jackson', 'Taylor Swift', 'David Bowie');
+console.log(artist.length); // Salida: 3
+
+// Rellenar a1 con valores aleatorios
+for (let i = 0; i < 10; i++) {
+  a1[i] = Math.random();
+}
+
+console.log(a1.length); // Salida: 10
+console.log(a2.length); // Salida: 4
+console.log(artist.length); // Salida: 3
+console.log(a1);
+console.log(a2);
+console.log(artist);
+
+
+
+const artist2 = ['Michael Jackson', 'Taylor Swift', 'David Bowie'];
+
+console.log(artist2.length); // Salida: 3
+console.log(artist2); // Salida: ["Michael Jackson", "Taylor Swift", "David Bowie"]
+console.log(artist2[0]); // Salida: Michael Jackson
+
+
+    </script>
+</body>
+</html>
