@@ -1,15 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Javascript: Logic</title>
-    </head>
-    <body>
-        <script type="text/javascript">
-           
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript: Logic</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        //podemos invocar antes de crearla
+        console.log(saludo());
+
+        function saludo() {
+            return "hola";
+        }
+
+        //no se puede invocar antes de crearla proque la hemos definido como const
+        //mayus();
+
+        //definir función como una expresión
+        const mayus = function mayusculas(cadena = '') {
+            return cadena.toUpperCase();
+        }
+
+        console.log(mayus("hola q ase"));
+
+        //podemos omitir el nombre de la función
+        //esto se llama una función anónima o LAMBDA
+        const suma = function (num1 = 0, num2 = 0) {
+            return num1 + num2;
+        }
+
+        console.log(suma(4));
+        console.log(suma(4, 6));
 
 
-           
-        </script>
-    </body>
+
+
+
+        //podemos invocar la función antes de ser declarada
+        hola();
+
+        function hola() {
+            console.log("Hola!");
+        }
+
+
+        //la función puede tener parámetros de entrada
+        //el parámetro de entrada puede tener un valor por defecto
+        //Opcionalmente la función puede devolver un resultado con return
+
+        function mayusculas(cadena = 'por defecto') {
+            return cadena.toUpperCase();
+        }
+
+        console.log(mayusculas());
+        console.log(mayusculas('me llamo juan'));
+
+    </script>
+</body>
+
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript: Logic</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        const lenguajes = new Array('CSS', 'JavaScript', 'HTML', 'hph');
+        const frameworks = new Array('React', 'Vue', 'Angular.js');
+
+
+        console.log(lenguajes);
+        lenguajes.reverse();
+        console.log(lenguajes);
+        lenguajes.sort();
+        console.log(lenguajes);
+
+
+        const tecnologias = lenguajes.concat(frameworks);
+        console.log(lenguajes);
+        console.log(tecnologias);
+
+        tecnologias.push('Webpack');
+        console.log(tecnologias);
+
+
+        const tecnologiasCsv = tecnologias.join(',');
+        console.log(tecnologiasCsv);
+
+        tecnologias.pop();
+
+        console.log(tecnologias);
+
+
+    </script>
+</body>
+
+</html>
