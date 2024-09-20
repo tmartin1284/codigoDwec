@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="alert alert-info" role="alert">
+            <strong></strong>
+        </div>
+    </div>
+
+    <script>
+        const alerta = document.querySelector(".alert strong");
+        //crear objetos tipo Date
+        const ahora = new Date();
+        const fincurso = new Date(2022,5,30,14,15,0);
+
+        console.log(ahora);
+        console.log(fincurso);
+
+        const tiempo_falta = fincurso - ahora;
+        console.log("Milisegundos que faltan hasta fin de curso: "+tiempo_falta);
+
+        //metodos para representar objeto Date
+        console.log(ahora.toString()); 
+        console.log(ahora.toTimeString());
+        console.log(ahora.toDateString());
+
+        console.log(ahora.toLocaleString()); 
+        console.log(ahora.toLocaleTimeString());
+        console.log(ahora.toLocaleDateString());  
+        
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        console.log(ahora.toLocaleDateString("es-ES",options));
+
+        alerta.innerHTML = ahora.toLocaleDateString("es-ES",options);
+
+    </script>
+</body>
+</html>

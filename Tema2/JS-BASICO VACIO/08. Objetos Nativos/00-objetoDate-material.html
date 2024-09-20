@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Object</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+        <div class="alert alert-info" role="alert">
+        </div>
+        
+    </div>
+    
+    
+    <script>
+
+        const alerta = document.querySelector(".alert-info");
+
+        const objeto = new Object();
+
+        objeto.nombre_propiedad;
+        objeto.nombre_funcion( [parametros] );
+
+
+        //Crear objetos Date
+        let fecha_actual = new Date();
+        let findecurso = new Date(2022, 5, 30);
+
+        //Mostrar objetos date
+        console.log(`La fecha actual es ${fecha_actual}`);
+        console.log(`El curso acaba en ${findecurso}`);
+        let tiempo_restante = findecurso - fecha_actual;
+        console.log(`El curso acaba dentro de ${tiempo_restante} milisegundos`);
+
+        console.log(fecha_actual.toString())
+        console.log(fecha_actual.toTimeString());
+        console.log(fecha_actual.toDateString());
+
+        console.log(fecha_actual.toLocaleString());
+        console.log(fecha_actual.toLocaleTimeString());
+        console.log(fecha_actual.toLocaleDateString());
+        console.log(fecha_actual.toLocaleDateString("es-ES",{ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
+        
+        const fecha_actual_legible = fecha_actual.toLocaleDateString("es-ES",{ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
+
+        alerta.innerHTML = "<strong>Hoy es:</strong> " + fecha_actual_legible;
+
+    </script>
+</body>
+</html>

@@ -1,38 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Javascript: Undefined / null</title>
-    </head>
-    <body>
-        <script type="text/javascript">
-            /*
-             * La idea de esta sección es que pruebes de una forma muy sencilla 
-             * las diferentes formas de de declarar variables 
-             * y analices los casos en los que da undefined o null y entender por qué
-             */
 
-            // UNDEFINED
-            // testing var
-            console.log(a)  //undefined
-            var a = 'testing var'
-            console.log(a)    //"testing var"
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript: Undefined / null</title>
+</head>
 
-            // testing let
-            // console.log(b)   //da error. no se puede acceder a una variable "let" antesw de declararla y asignarle valro
-            let b = 'testing let'
-            console.log(b)    //testing let
+<body>
+    <script type="text/javascript">
+        /*
+         * La idea de esta sección es que pruebes de una forma muy sencilla 
+         * las diferentes formas de de declarar variables 
+         * y analices los casos en los que da undefined o null y entender por qué
+         */
 
-            // NULL
-            // testing var
-            console.log(c)     //undefined
-            var c = null
-            console.log(c)     //null
+        // UNDEFINED
+        // testing var
+        console.log(a)  //undefined
+        var a = 'testing var'
+        console.log(a)    //"testing var"
 
-            // testing let
-           // console.log(d)
-            let d = null
-            console.log(d)    //null
-        </script>
-    </body>
+        // testing let
+        // console.log(b)   //da error. no se puede acceder a una variable "let" antesw de declararla y asignarle valro
+        let b = 'testing let'
+        console.log(b)    //testing let
+
+        // NULL
+        // testing var
+        console.log(c)     //undefined
+        var c = null
+        console.log(c)     //null
+
+        // testing let
+        // console.log(d)
+        let d = null
+        console.log(d)    //null
+
+        // Ejemplo de Undefined
+        let x;
+        console.log(x); // Salida: undefined
+
+        // Ejemplo de Null
+        let y = null;
+        console.log(y); // Salida: null
+
+        // Verificación de tipos
+        console.log(typeof x); // Salida: undefined
+        console.log(typeof y); // Salida: object
+
+
+
+
+    </script>
+</body>
+
 </html>

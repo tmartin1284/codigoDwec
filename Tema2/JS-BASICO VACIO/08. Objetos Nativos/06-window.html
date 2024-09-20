@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(window.innerHeight);
+        console.log(window.outerHeight);
+        console.log(window.innerWidth);
+        console.log(window.outerWidth);
+
+        //nueva ventana emergente
+        const ventana = window.open();
+        ventana.document.write("Esto es una emergente");
+        var configuracion_ventana = "menubar=no,location=no,resizable=no,scrollbars=no,status=no";
+
+        window.open("https://developer.mozilla.org/es/docs/Web/API/Window/open", "Uso de window.open()", configuracion_ventana)
+    </script>
+</body>
+
+</html>
