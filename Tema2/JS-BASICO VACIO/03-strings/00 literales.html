@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones con cadenas</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+         *   ejemplo de literales de cadena
+         */
+
+        let nombre = "Manolo";
+        let comida = "hierba";
+
+        console.log( "la comida favorita de " + nombre + " es " + comida);
+
+        nombre = ["Marcos", "Alarcón"];
+        comida = "helado";
+
+        let mensaje = "la comida favorita de \n" + nombre + " es " + comida +" y le gusta";
+
+        console.log( mensaje);
+
+        let literal = `la comida favorita de ${nombre} es ${comida}` ;
+
+        console.log( literal);
+
+    </script>
+</body>
+
+</html>

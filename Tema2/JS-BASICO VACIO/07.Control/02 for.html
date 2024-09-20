@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript: Logic</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        let personas = [{ name: 'John', age: 30, city: 'New York' },
+        { name: 'Marcos', age: 22, city: 'Toledo City' },
+        { name: 'Fonso', age: 24 },
+        { name: 'Manolo', age: 2, city: 'Jaula' }];
+/*
+        for (let persona of personas) {
+            for (let atributo in persona) {
+                console.log(atributo + ': ' + persona[atributo]);
+            }
+        }
+*/
+
+
+        const users = [  //sabemos lo que es name y age
+            { name: 'John', age: 15 },
+            { name: 'Jane', age: 25 },
+            { name: 'Jim', age: 35 },
+            { name: 'Manolo', age: 2 },
+        ];
+
+        /* users.forEach(user => {
+             console.log(`${user.name} tiene ${user.age} años.`);  //fijaos que estamos usando literales
+             if (user.age >= 18) {  //le estamos pasando una función, y dentro podemos poner el codigo que nos dé la gana
+                 console.log(`El usuario ${user.name} es mayor de edad, y puede salir al recreo`);
+             } else {
+                 console.log(`El usuario ${user.name} es menor de edad, y necesita que le firmen su padres`);
+ 
+             }
+         });
+ 
+ */
+
+ //Con for each, pasamos la funcionalidad (el funcion) a cada uno de los objetos del array
+ //el metodo puede estar definido (nombrado) o ser implicto
+        users.forEach(user => recorrer(user));
+        personas.forEach(user => recorrer(user));
+
+        //con el for of, necesitamos que el array se pase a la estructgrua de control
+        recorrer2(personas);
+        recorrer2(users);
+
+
+
+        function recorrer(user) {
+            console.log(`${user.name} tiene ${user.age} años.`);  //fijaos que estamos usando literales
+            if (user.age >= 18) {  //le estamos pasando una función, y dentro podemos poner el codigo que nos dé la gana
+                console.log(`El usuario ${user.name} es mayor de edad, y puede salir al recreo yujuu`);
+            } else {
+                console.log(`El usuario ${user.name} es menor de edad, y necesita que le firmen su padres, joo`);
+
+            }
+        }
+
+
+        function recorrer2(array) {
+            for (let persona of array) {
+                for (let atributo in persona) {
+                    console.log(atributo + ': ' + persona[atributo]);
+                }
+            }
+        }
+
+        
+    </script>
+</body>
+
+</html>

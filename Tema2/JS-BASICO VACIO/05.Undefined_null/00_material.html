@@ -22,8 +22,17 @@
 
         // testing let
         // console.log(b)   //da error. no se puede acceder a una variable "let" antesw de declararla y asignarle valro
-        let b = 'testing let'
+        let b;
+        console.log(b)    //undefined
+        console.log(typeof b); //undefined
+
+        b = null;
+        console.log(b)    //null
+        console.log(typeof b);  //object
+        
+        b = 'testing let'
         console.log(b)    //testing let
+        console.log(typeof b); //string
 
         // NULL
         // testing var
