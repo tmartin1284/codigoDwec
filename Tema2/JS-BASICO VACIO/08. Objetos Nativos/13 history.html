@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript: Logic</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        // Navegando hacia atrás y hacia adelante en el historial
+        function irAtras() {
+            window.history.back();
+        }
+
+        function irAdelante() {
+            window.history.forward();
+        }
+
+        // Accediendo a la longitud de la pila del historial
+        let longitudHistorial = window.history.length;
+        console.log(`Número de páginas en el historial: ${longitudHistorial}`);
+
+
+    </script>
+</body>
+
+</html>
