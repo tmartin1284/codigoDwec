@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript: Logic</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           
+// Objeto con múltiples atributos, incluyendo un arreglo de objetos
+let user = {
+  name: "John Doe",
+  age: 35,
+  address: {
+    street: "Main Street",
+    city: "New York",
+    country: "USA"
+  },
+  orderHistory: [
+    { id: 2, product: "Tablet", quantity: 2 },
+    { id: 3, product: "Laptop", quantity: 1 }
+  ]
+};
+
+// Convertir a JSON usando JSON.stringify()
+let jsonUser = JSON.stringify(user);
+
+console.log("Objeto convertido a JSON:");
+console.log(jsonUser);
+
+// Convertir de vuelta a objeto usando JSON.parse()
+let parsedObject = JSON.parse(jsonUser);
+
+console.log("\nJSON convertido de vuelta a objeto:");
+console.log(parsedObject);
+           
+        </script>
+    </body>
+</html>
