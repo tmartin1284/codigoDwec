@@ -2,15 +2,15 @@
 
 #### **Ejercicios con Arrays, y de paso con algo de Math**
    1. Crea un array de 10 elementos, pero sin inicializar. Llamalo números
-    2. Inicializa esos elementos con números aleatorios (usa métodos de la clase math), entre 0 y mil. Redondea los número a dos decimales.
-    3. Imprime por pantalla todos los elementos del array (con un toString se puede hacer, pero quiero que recorrais el array).
-    4. Imprime por pantalla el número mayor  y el menor ( Podéis hacerlo usando las funciones de la clase Math, o bien con un algoritmo de burbuja sencillito).
-    5. Imprimir también qué posición ocupan estos números dentro del arrray.
-    6. Elimina del array esos elementos, el mayor y el menor, y muestra de nuevo el array.
-    7. Crea un nuevo array, que contenga, la raiz cuadrada, cúbica, cuarta etc de los elementos del array Numeros. Este array se llamará raices.
-    8. Añade en raices un primer elemento 1. Imprimelo por consola.
-    9. Añade al array Números aquellos elementos de Raices que sean mayores que uno.
-    10. Finalmente, ordena Numeros e imprimelo por pantalla.
+   2. Inicializa esos elementos con números aleatorios (usa métodos de la clase math), entre 0 y mil. Redondea los número a dos decimales.
+   4. Imprime por pantalla todos los elementos del array (con un toString se puede hacer, pero quiero que recorrais el array).
+   5. Imprime por pantalla el número mayor  y el menor ( Podéis hacerlo usando las funciones de la clase Math, o bien con un algoritmo de burbuja sencillito).
+   6. Imprimir también qué posición ocupan estos números dentro del arrray.
+   7. Elimina del array esos elementos, el mayor y el menor, y muestra de nuevo el array.
+   8. Crea un nuevo array, que contenga, la raiz cuadrada, cúbica, cuarta etc de los elementos del array Numeros. Este array se llamará raices.
+   9. Añade en raices un primer elemento 1. Imprimelo por consola.
+   10. Añade al array Números aquellos elementos de Raices que sean mayores que uno.
+   11. Finalmente, ordena Numeros e imprimelo por pantalla.
 
 
 #### Objetos
