@@ -13,9 +13,18 @@
             this.nombre = nombre;
             this.apellido = apellido;
             this.anioNac = fechaNac;
+            this.mascota = new Mascota("perro");
+            const addmascota = function (tipo){
+                return new Mascota (tipo);
+            }
+            this.mascota2= addmascota("gato");
             this.getFechaNac = function () {
                 return this.anioNac;
             }
+        }
+
+        function Mascota (tipo){
+            this.tipomascota=tipo;
         }
 
         //creamos una instancia del objeto Persona
@@ -23,6 +32,7 @@
 
         console.log(p1);
         console.log(p1.getFechaNac());
+        console.log(p1.toString());
 
 
     </script>
