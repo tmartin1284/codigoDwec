@@ -16,7 +16,7 @@
 #### Objetos
    1. Tenemos que hacer la página web de una Granja, que tiene los siguientes animales:
 
-       1.  Ovejas, que ![oveja!](img/oveja.avif):
+       1.  Ovejas, que: ![oveja!](img/oveja.avif)
             1. Pueden ser de diferentes razas (merinas, churras etc), 
             2. Tienen un color, que cuando nacen es blanco, aunque conforme crecen a algunas de ellas les puede cambiar;
             3. Son capaces de proporcionar un máximo de X litros de leche, este dato es propio de cada ejemplar de oveja, y depende de su genética. 
@@ -25,7 +25,7 @@
             6. Las ovejas balan, es decir, imprimen por pantalla el mensaje "Beeeee"
             7. Cuando se muestran las ovejas, nos interesa saber, su raza, color, y cuanta leche en total han producido (por tanto este dato, además de devolverse, deberá almacenarse internamente).
 
-         2. Conejos, son seres de luz que:
+       2. Conejos, son seres de luz que: ![conejo!](img/conejo.avif)
             1. Pueden ser de varios colores, (un conejo puede tener varios colores a la vez, ej blanco, marron, negro).
             2. Pueden tener las orejas pa arriba, o pa abajo. Este y el anterior son dos datos propios de cada conejo cuando nace.
             3. Pueden dar cariño (de 0 a 100). Este dato, aunque se puede cambiar a lo largo de la vida del conejo, inicialmente es un número aleatorio.
@@ -35,15 +35,15 @@
             7.  Los conejos se achuchan; si es achuchable mostrará pon pantalla cariñitos; si no es achuchable dirá "buffffff".
             8.  Cuando se muestran los conejos, nos interesa saber: los colores, pa dónde van las orejas, y si es achuchable se acompañará del mensaje "quiero ser tu mejor amigooo". Si no es achuchable, sólo mostrará los dos primeros datos.
    
-         3. Gallinas, seres mágnificos que:
-            1. Nos proporcionan huevos de diferentes colores. Cada gallina sólo es capaz de poner huevos de un color, que debemos guardar. 
-            2. Nos interesa saber la cantidad total de huevos que nos ha proporcionado la gallina, por defecto 0, pero cada vez que ponen un huevo, se aumentara. 
-            3. También habrá un índice de ponibilidad que es el número de huevos que ha puesto la gallina entre los dias que tiene de adulta (pasados los primeros 6 meses).
-            4. Se debe controlar si pasado el primer año, el índice de ponibilidad de una gallina cae por debajo de 0,1, o si se pasa una semana sin poner un huevo. En este caso, hay que avisar a los de Gallina Blanca.
-            5. Las gallinas cacarean, imprimiendo por pantalla un mensaje "caaaaa caaaca ca caaaaaa". NOrmalmenteo cacarean justo después de poner un huevo.
-            6. Cuando se muestran las gallinas, nos interesa saber, el color de sus huevos, cuantos huevos totales lleva puestos, y cuantos en la última semana. Si el índice de ponibilidad es menor de 0,1, se añadirá el mensaje "Poooo po po po, me voy al puchero".
+       1. Gallinas, seres mágnificos que: ![gallina!](img/gallina.jpg)
+            1.  Nos proporcionan huevos de diferentes colores. Cada gallina sólo es capaz de poner huevos de un color, que debemos guardar. 
+            2.  Nos interesa saber la cantidad total de huevos que nos ha proporcionado la gallina, por defecto 0, pero cada vez que ponen un huevo, se aumentara. 
+            3.  También habrá un índice de ponibilidad que es el número de huevos que ha puesto la gallina entre los dias que tiene de adulta (pasados los primeros 6 meses).
+            4.  Se debe controlar si pasado el primer año, el índice de ponibilidad de una gallina cae por debajo de 0,1, o si se pasa una semana sin poner un huevo. En este caso, hay que avisar a los de Gallina Blanca.
+            5.  Las gallinas cacarean, imprimiendo por pantalla un mensaje "caaaaa caaaca ca caaaaaa". NOrmalmenteo cacarean justo después de poner un huevo.
+            6.  Cuando se muestran las gallinas, nos interesa saber, el color de sus huevos, cuantos huevos totales lleva puestos, y cuantos en la última semana. Si el índice de ponibilidad es menor de 0,1, se añadirá el mensaje "Poooo po po po, me voy al puchero".
    
-         4. Vacas, son seres muuuuy inteligentes que:
+         1. Vacas, son seres muuuuy inteligentes que: ![vaca!](img/vaca.webp)
             1. Pueden tener varios colores, igual que los conejos.
             2. Tienen cuernos, de los que debemos guardar su longitud.
             3. Son capaces de proporcionar un máximo de X litros de leche, este dato es propio de cada ejemplar de vaca. 
@@ -51,7 +51,7 @@
             5. Las vacas se pueden ordeñar, y nos van a devolver una cantidad Y de litros de leche ( que estará entre 0 y el máximo). Si una vaca se queda embarazada automaticamente no puede producir leche (0 litros).
             6. Las vacas mugen, imprimiendo por pantalla el mensaje *"muuuuuuu-cho cuidado que tengo cuernos"*. A veces, cuando se las *ordeña*, *mugen*.
             7. Cuando mostramos las vacas, nos interesa saber sus colores, la cantidad de leche que llevan dada. Si la vaca está embarazada, debe añadirse el mensaje "estoy esperando un ternerito".
-         5. Gallos, esos seres graciosos del corral:
+         2. Gallos, esos seres graciosos del corral: ![gallo!](img/gallo.jpg)
             1. Deberemos almacenar su *raza*.
             2. Tendrá alguno o varios de estos colores (azul, verde, amarillo, marrón, blanco, negro, gris). Esto es un hecho aleatorio y depende de su genética.
             3. Pueden cantar, de tal forma que entre las 4 y las 8 am, o si han pasado 5 minutos desde la última vez que cantó, muestra por pantalla "kikirikiiiiii". Si no han pasado esos cinco minutos, muestar "poo popopo pooo".
