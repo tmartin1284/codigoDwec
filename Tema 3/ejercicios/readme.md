@@ -43,7 +43,7 @@
             5.  Las gallinas cacarean, imprimiendo por pantalla un mensaje "caaaaa caaaca ca caaaaaa". NOrmalmenteo cacarean justo después de poner un huevo.
             6.  Cuando se muestran las gallinas, nos interesa saber, el color de sus huevos, cuantos huevos totales lleva puestos, y cuantos en la última semana. Si el índice de ponibilidad es menor de 0,1, se añadirá el mensaje "Poooo po po po, me voy al puchero".
    
-         1. Vacas, son seres muuuuy inteligentes que: ![vaca!](img/vaca.webp)
+         1. Vacas, son seres muuuuy inteligentes que: ![vaca!](img/vaca.jpg)
             1. Pueden tener varios colores, igual que los conejos.
             2. Tienen cuernos, de los que debemos guardar su longitud.
             3. Son capaces de proporcionar un máximo de X litros de leche, este dato es propio de cada ejemplar de vaca. 
