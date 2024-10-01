@@ -16,7 +16,7 @@
 #### Objetos
    1. Tenemos que hacer la página web de una Granja, que tiene los siguientes animales:
 
-         1.  Ovejas, que ![oveja!](img/oveja.avif){width=200 height=y} :
+         1.  Ovejas, que ![oveja!](img/oveja.avif):
             1. Pueden ser de diferentes razas (merinas, churras etc), 
             2. Tienen un color, que cuando nacen es blanco, aunque conforme crecen a algunas de ellas les puede cambiar;
             3. Son capaces de proporcionar un máximo de X litros de leche, este dato es propio de cada ejemplar de oveja, y depende de su genética. 
