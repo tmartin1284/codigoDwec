@@ -35,7 +35,7 @@
             7.  Los conejos se *achuchan*; si es achuchable mostrará pon pantalla cariñitos; si no es achuchable dirá "buffffff".
             8.  Cuando se **muestran** los conejos, nos interesa saber: los *colores*, pa dónde van las *orejas*, y si es achuchable se acompañará del mensaje "quiero ser tu mejor amigooo". Si no es achuchable, sólo mostrará los dos primeros datos.
    
-       3. **Gallinas**, seres mágnificos que: ![gallina!](img/gallina.jpg)
+       3. **Gallinas**, seres magníficos que: ![gallina!](img/gallina.jpg)
             1.  Nos proporcionan huevos de diferentes *colores*. Cada gallina sólo es capaz de poner huevos de un color, que debemos guardar. 
             2.  Nos interesa saber la *cantidad total de huevos* que nos ha proporcionado la gallina, por defecto 0, pero cada vez que ponen un huevo, se aumentara. 
             3.  También habrá un *índice de ponibilidad* que es el número de huevos que ha puesto la gallina entre los dias que tiene de adulta (pasados los primeros 6 meses).
