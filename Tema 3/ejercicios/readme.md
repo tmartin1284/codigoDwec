@@ -51,7 +51,7 @@
             5. Las vacas se pueden ordeñar, y nos van a devolver una cantidad Y de litros de leche ( que estará entre 0 y el máximo). Si una vaca se queda embarazada automaticamente no puede producir leche (0 litros).
             6. Las vacas mugen, imprimiendo por pantalla el mensaje *"muuuuuuu-cho cuidado que tengo cuernos"*. A veces, cuando se las *ordeña*, *mugen*.
             7. Cuando mostramos las vacas, nos interesa saber sus colores, la cantidad de leche que llevan dada. Si la vaca está embarazada, debe añadirse el mensaje "estoy esperando un ternerito".
-         2. Gallos, esos seres graciosos del corral: ![gallo!](img/gallo.jpg)
+         2. Gallos, esos seres graciosos del corral: ![gallo!](img/gallo.PNG)
             1. Deberemos almacenar su *raza*.
             2. Tendrá alguno o varios de estos colores (azul, verde, amarillo, marrón, blanco, negro, gris). Esto es un hecho aleatorio y depende de su genética.
             3. Pueden cantar, de tal forma que entre las 4 y las 8 am, o si han pasado 5 minutos desde la última vez que cantó, muestra por pantalla "kikirikiiiiii". Si no han pasado esos cinco minutos, muestar "poo popopo pooo".
