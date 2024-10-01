@@ -16,7 +16,7 @@
 #### Objetos
    1. Tenemos que hacer la página web de una Granja, que tiene los siguientes animales:
 
-         1. ![oveja!](img/oveja.avif) Ovejas, que :
+         1.  Ovejas, que ![oveja!](img/oveja.avif){width=200 height=y} :
             1. Pueden ser de diferentes razas (merinas, churras etc), 
             2. Tienen un color, que cuando nacen es blanco, aunque conforme crecen a algunas de ellas les puede cambiar;
             3. Son capaces de proporcionar un máximo de X litros de leche, este dato es propio de cada ejemplar de oveja, y depende de su genética. 
@@ -47,14 +47,15 @@
             1. Pueden tener varios colores, igual que los conejos.
             2. Tienen cuernos, de los que debemos guardar su longitud.
             3. Son capaces de proporcionar un máximo de X litros de leche, este dato es propio de cada ejemplar de vaca. 
-            4. La leche de vaca puede ser entera, desnatada o semidesnatada.
+            4. La leche de vaca puede ser *entera*, *desnatada*, *semidesnatada* o *merengada*.
             5. Las vacas se pueden ordeñar, y nos van a devolver una cantidad Y de litros de leche ( que estará entre 0 y el máximo). Si una vaca se queda embarazada automaticamente no puede producir leche (0 litros).
-            6. Las vacas mugen, imprimiendo por pantalla el mensaje "muuuuuuu-cho cuidado que tengo cuernos".
+            6. Las vacas mugen, imprimiendo por pantalla el mensaje *"muuuuuuu-cho cuidado que tengo cuernos"*. A veces, cuando se las *ordeña*, *mugen*.
             7. Cuando mostramos las vacas, nos interesa saber sus colores, la cantidad de leche que llevan dada. Si la vaca está embarazada, debe añadirse el mensaje "estoy esperando un ternerito".
          5. Gallos, esos seres graciosos del corral:
             1. Deberemos almacenar su *raza*.
-            2. Pueden cantar, de tal forma que entre las 4 y las 8 am, o si han pasado 5 minutos desde la última vez que cantó, muestra por pantalla "kikirikiiiiii". Si no han pasado esos cinco minutos, muestar "poo popopo pooo".
-            3. Cuando se muestran los gallos, nos interesa saber sus colores, y la hora del primer canto del día (que tendremos almacenado).
+            2. Tendrá alguno o varios de estos colores (azul, verde, amarillo, marrón, blanco, negro, gris). Esto es un hecho aleatorio y depende de su genética.
+            3. Pueden cantar, de tal forma que entre las 4 y las 8 am, o si han pasado 5 minutos desde la última vez que cantó, muestra por pantalla "kikirikiiiiii". Si no han pasado esos cinco minutos, muestar "poo popopo pooo".
+            4. Cuando se muestran los gallos, nos interesa saber sus colores, y la hora del primer canto del día (que tendremos almacenado).
          
    2. Se pide:
       1. Crear las funciones constructoras de cada uno de los animales anteriores. Tened en cuenta que al crear un animal deberemos pasarle valores para los atributos que no tengan un valor por defecto. Todos los objetos tienen atributos (algunos con setter y getter), métodos (algunos con logica), y todos tienen una función `toString()` que debéis definir según se indica.
@@ -62,15 +63,18 @@
          1. La oveja será churra, y estará esquilada. La ordeñaremos dos veces, después quedará embarazada e intentaremos ordeñarla otra vez. Cuando cambiemos el color de la oveja a marron, balará. 
          2. El conejo será de colores azul, rojo y verde (sí tenemos un conejo RGB), con las orejas para abajo. Lo achucharemos, si es no achuchable cambiaremos los valores de cariño para que sea achuchable, y lo volveremos a achuchar.
          3. La gallina tiene 7 meses y pondrá los huevos de color *azul fosforito*. Controlaremos la ponibilidad de la gallina (que debe ser 0 porque acabamos de crearla). Despues pondrá tres huevos, y lo comprobaremos de nuevo.
-         4. Después de todo esto, mostraremos los cinco animales, llamando a su `toString()`.
+         4. La vaca será de color negro, con unos cuernos de 0,1 metros. Esta vaca da leche desnatada. La ordeñaremos varias veces (hasta que muja al menos una vez) y mostraremos cuanta leche nos ha dado.
+         5. El gallo, será de raza *azarqueliana*, cantará varias veces seguidas.
+         6. Después de todo esto, mostraremos los cinco animales, llamando a su `toString()`.
    
-   3. Cread un objeto de cada tipo. Imprimelos
-   4. La granja está compuesta por cuatro pabellones. Cada pabellón tiene un número aleatorio de animales entre 5 y 10. Crea el metodo constructor de la granja, e inicializa sus animales usando math. random (en el caso de los colores, podeis utilizar un switch). Imprimelos todos usando estructuras de control.
+  
+   3. La granja está compuesta por cuatro cuadras (una por cada tipo de animales), y un gallo. Cada cuadra tiene un número aleatorio de animales entre 5 y 10. Crea la granja utilizando el constructor *Object* o directamente con la notación literal (pero no hagas un constructor).
+   4. Inicializa los animales de las cuadras usando valores aleatorios (en el caso de los colores, podeis utilizar un switch). Imprimelos todos usando estructuras de control.
    5. Selecciona, mediante funciones de lambda, sobre cada array (pabellón).
          1. la oveja que más leche da.
          2. el conejo con mayor índice de achuchabilidad.
          3. la gallina con más índice de ponibilidad.
          4. la vaca con los cuernos más largos
-   6. Guarda estos animales en un array de AnimalesSelectos. Imprimelo.
+   6. Guarda estos animales en un array de *AnimalesSelectos*. Imprimelo a través de las funciones *toString()* de los objetos.
    7.  Serializa en JSON los AnimalesSelectos, e imprimelo también.
    
