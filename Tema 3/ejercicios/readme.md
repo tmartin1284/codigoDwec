@@ -16,7 +16,7 @@
 #### Objetos
    1. Tenemos que hacer la página web de una Granja, que tiene los siguientes animales:
 
-       1.  Ovejas, que: ![oveja!](img/oveja.avif)
+       1.  Ovejas, que: ![oveja!](img/oveja.PNG)
             1. Pueden ser de diferentes razas (merinas, churras etc), 
             2. Tienen un color, que cuando nacen es blanco, aunque conforme crecen a algunas de ellas les puede cambiar;
             3. Son capaces de proporcionar un máximo de X litros de leche, este dato es propio de cada ejemplar de oveja, y depende de su genética. 
@@ -25,7 +25,7 @@
             6. Las ovejas balan, es decir, imprimen por pantalla el mensaje "Beeeee"
             7. Cuando se muestran las ovejas, nos interesa saber, su raza, color, y cuanta leche en total han producido (por tanto este dato, además de devolverse, deberá almacenarse internamente).
 
-       2. Conejos, son seres de luz que: ![conejo!](img/conejo.avif)
+       2. Conejos, son seres de luz que: ![conejo!](img/conejo.jpeg)
             1. Pueden ser de varios colores, (un conejo puede tener varios colores a la vez, ej blanco, marron, negro).
             2. Pueden tener las orejas pa arriba, o pa abajo. Este y el anterior son dos datos propios de cada conejo cuando nace.
             3. Pueden dar cariño (de 0 a 100). Este dato, aunque se puede cambiar a lo largo de la vida del conejo, inicialmente es un número aleatorio.
@@ -35,7 +35,7 @@
             7.  Los conejos se achuchan; si es achuchable mostrará pon pantalla cariñitos; si no es achuchable dirá "buffffff".
             8.  Cuando se muestran los conejos, nos interesa saber: los colores, pa dónde van las orejas, y si es achuchable se acompañará del mensaje "quiero ser tu mejor amigooo". Si no es achuchable, sólo mostrará los dos primeros datos.
    
-       1. Gallinas, seres mágnificos que: ![gallina!](img/gallina.jpg)
+       3. Gallinas, seres mágnificos que: ![gallina!](img/gallina.jpg)
             1.  Nos proporcionan huevos de diferentes colores. Cada gallina sólo es capaz de poner huevos de un color, que debemos guardar. 
             2.  Nos interesa saber la cantidad total de huevos que nos ha proporcionado la gallina, por defecto 0, pero cada vez que ponen un huevo, se aumentara. 
             3.  También habrá un índice de ponibilidad que es el número de huevos que ha puesto la gallina entre los dias que tiene de adulta (pasados los primeros 6 meses).
