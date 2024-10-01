@@ -1,4 +1,4 @@
-# Ejercicios Tema 3
+# Práctica Tema 3
 
 #### **Ejercicios con Arrays, y de paso con algo de Math**
    1. Crea un array de 10 elementos, pero sin inicializar. Llamalo *Números*.
@@ -56,9 +56,10 @@
             3. Pueden *cantar*, de tal forma que entre las 4 y las 8 am, o si han pasado 5 minutos desde la última vez que cantó, muestra por pantalla "kikirikiiiiii". Si no han pasado esos cinco minutos, muestar "poo popopo pooo".
             4. Cuando se **muestran** los gallos, nos interesa saber sus colores, y la hora del primer canto del día (que tendremos almacenado).
          
-   2. Se pide:
+   2. **Se pide**:
       1. Crear las **funciones constructoras** de cada uno de los animales anteriores. Tened en cuenta que al crear un animal deberemos pasarle valores para los atributos que no tengan un valor por defecto. Todos los objetos tienen atributos (algunos con setter y getter), métodos (algunos con logica), y todos tienen una función `toString()` que debéis definir según se indica.
-      2. Crear un objeto de cada tipo, según esto:
+   
+      2. Crear un objeto de cada tipo, y manipuladlo un poco. Según esto:
          1. La oveja será churra, y estará esquilada. La ordeñaremos dos veces, después quedará embarazada e intentaremos ordeñarla otra vez. Cuando cambiemos el color de la oveja a marron, balará. 
          2. El conejo será de colores azul, rojo y verde (sí tenemos un conejo RGB), con las orejas para abajo. Lo achucharemos, si es no achuchable cambiaremos los valores de cariño para que sea achuchable, y lo volveremos a achuchar.
          3. La gallina tiene 7 meses y pondrá los huevos de color *azul fosforito*. Controlaremos la ponibilidad de la gallina (que debe ser 0 porque acabamos de crearla). Despues pondrá tres huevos, y lo comprobaremos de nuevo.
@@ -69,7 +70,7 @@
   
    3. La granja está compuesta por cuatro cuadras (una por cada tipo de animales), y un gallo. Cada cuadra tiene un número aleatorio de animales entre 5 y 10. Crea la granja utilizando el constructor *Object* o directamente con la notación literal (pero no hagas un constructor).
    4. Inicializa los animales de las cuadras usando valores aleatorios (en el caso de los colores, podeis utilizar un switch). Imprimelos todos usando estructuras de control. Incluye el gallo que has creado antes.
-   5. Selecciona, mediante funciones de lambda, sobre cada array (pabellón).
+   5. Selecciona, mediante funciones de **lambda**, sobre cada array (cuadra).
          1. la oveja que más leche da.
          2. el conejo con mayor índice de achuchabilidad.
          3. la gallina con más índice de ponibilidad.
