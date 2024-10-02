@@ -3,13 +3,13 @@
 #### **Ejercicios con Arrays, y de paso con algo de Math**
    1. Crea un array de 10 elementos, pero sin inicializar. Llamalo *Números*.
    2. Inicializa esos elementos con números aleatorios (usa métodos de la clase `Math`), entre 0 y mil. Redondea los número a dos decimales.
-   4. Imprime por pantalla todos los elementos del array (con un `toString()` se puede hacer, pero quiero que recorrais el array).
-   5. Imprime por pantalla el número mayor  y el menor (Podéis hacerlo usando las funciones de la clase `Math`, o bien con un algoritmo de burbuja sencillito).
+   4. Imprime por pantalla todos los elementos del array (con un `toString()` se puede hacer, pero quiero que recorrais el array con una estructura de control).
+   5. Imprime por pantalla el número mayor  y el menor (Podéis hacerlo usando las funciones de la clase `Math`, o bien con un algoritmo de burbuja sencillito. Buscad el algoritmo de la burbuja, que es bonito).
    6. Imprimir también qué **posición** ocupan estos números dentro del arrray.
    7. Elimina del array esos elementos, el mayor y el menor, y muestra de nuevo el array.
-   8. Crea un nuevo array, que contenga, la raiz cuadrada (del primero), cúbica (del segundo), cuarta (del tercero) etc de los elementos del array *Numeros*. Este array se llamará *Raices*.
-   9. Añade en Raices un primer elemento, cuyo valor será 1. Imprime el array entero por consola.
-   10. Añade al array *Números* aquellos elementos de *Raices* que sean mayores que uno.
+   8. Crea un nuevo array, que contenga, la raíz cuadrada (del primero), cúbica (del segundo), cuarta (del tercero) etc de los elementos del array *Numeros*. Este array se llamará *Raíces*.
+   9. Añade en *Raíces* un primer elemento, cuyo valor será 1. Imprime el array entero por consola.
+   10. Añade al array *Números* aquellos elementos de *Raíces* que sean mayores que uno.
    11. Finalmente, ordena *Numeros* e imprimelo por consola. Tambien puedes hacer un `document.write()`.
 
 
@@ -26,7 +26,7 @@
             7. Cuando se **muestran** las ovejas, nos interesa saber: su *raza*, *color*, y cuanta *leche en total* han producido (por tanto este dato, además de devolverse, deberá almacenarse internamente).
 
        2. **Conejos**, son seres de luz que: ![conejo!](img/conejo.PNG)
-            1. Pueden ser de varios *colores*, (un conejo puede tener varios colores a la vez, ej blanco, marron, negro).
+            1. Pueden ser de varios *colores*, (un conejo puede tener varios colores a la vez, ej blanco, marrón, negro).
             2. Pueden tener las *orejas* pa arriba, o pa abajo. Este y el anterior son dos datos propios de cada conejo cuando nace.
             3. Pueden *dar cariño* (de 0 a 100). Este dato, aunque se puede cambiar a lo largo de la vida del conejo, inicialmente es un número aleatorio.
             4. Son capaces de *roer con una potencia* de 1 a 100. Inicialmente también es un numero aleatorio que puede cambiar con el tiempo.
@@ -60,7 +60,7 @@
       1. Crear las **funciones constructoras** de cada uno de los animales anteriores. Tened en cuenta que al crear un animal deberemos pasarle valores para los atributos que no tengan un valor por defecto. Todos los objetos tienen atributos (algunos con setter y getter), métodos (algunos con logica), y todos tienen una función `toString()` que debéis definir según se indica.
    
       2. Crear un objeto de cada tipo, y manipuladlo un poco. Según esto:
-         1. La oveja será churra, y estará esquilada. La ordeñaremos dos veces, después quedará embarazada e intentaremos ordeñarla otra vez. Cuando cambiemos el color de la oveja a marron, balará. 
+         1. La oveja será churra, y estará esquilada. La ordeñaremos dos veces, después quedará embarazada e intentaremos ordeñarla otra vez. Cuando cambiemos el color de la oveja a marrón, balará. 
          2. El conejo será de colores azul, rojo y verde (sí tenemos un conejo RGB), con las orejas para abajo. Lo achucharemos, si es no achuchable cambiaremos los valores de cariño para que sea achuchable, y lo volveremos a achuchar.
          3. La gallina tiene 7 meses y pondrá los huevos de color *azul fosforito*. Controlaremos la ponibilidad de la gallina (que debe ser 0 porque acabamos de crearla). Despues pondrá tres huevos, y lo comprobaremos de nuevo.
          4. La vaca será de color negro, con unos cuernos de 0,1 metros. Esta vaca da leche desnatada. La ordeñaremos varias veces (hasta que muja al menos una vez) y mostraremos cuanta leche nos ha dado.
@@ -71,10 +71,10 @@
    3. La granja está compuesta por cuatro cuadras (una por cada tipo de animales), y un gallo. Cada cuadra tiene un número aleatorio de animales entre 5 y 10. Crea la granja utilizando el constructor *Object* o directamente con la notación literal (pero no hagas un constructor).
    4. Inicializa los animales de las cuadras usando valores aleatorios (en el caso de los colores, podeis utilizar un switch). Imprimelos todos usando estructuras de control. Incluye el gallo que has creado antes.
    5. Selecciona, mediante funciones de **lambda**, sobre cada array (cuadra).
-         1. la oveja que más leche da.
+         1. la oveja que más leche es capaz de dar (máximo de leche).
          2. el conejo con mayor índice de achuchabilidad.
-         3. la gallina con más índice de ponibilidad.
-         4. la vaca con los cuernos más largos
+         3. la gallina con más edad.
+         4. la vaca con los cuernos más largos.
    6. Guarda estos animales en un array de *AnimalesSelectos*. Imprimelo a través de las funciones `toString()` de los objetos.
    7.  Serializa en JSON los *AnimalesSelectos*, e imprimelo también.
    
