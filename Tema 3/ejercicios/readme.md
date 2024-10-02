@@ -54,7 +54,7 @@
             1. Deberemos almacenar su *raza*.
             2. Tendrá alguno o varios de estos *colores* (azul, verde, amarillo, marrón, blanco, negro, gris). Esto es un hecho aleatorio y depende de su genética. ¿sabiendo que los posibles colores del gallo son esos 7, podéis almacenarlos de una forma eficiente?.
             3. Pueden *cantar*, de tal forma que entre las 4 y las 8 am, o si han pasado 5 minutos desde la última vez que cantó, muestra por pantalla "kikirikiiiiii". Si no han pasado esos cinco minutos, muestar "poo popopo pooo".
-            4. Cuando se **muestran** los gallos, nos interesa saber sus colores, y la hora del primer canto del día (que tendremos almacenado).
+            4. Cuando se **muestran** los gallos, nos interesa saber sus colores, y la hora del último canto que ha hecho.
          
    2. **Se pide**:
       1. Crear las **funciones constructoras** de cada uno de los animales anteriores. Tened en cuenta que al crear un animal deberemos pasarle valores para los atributos que no tengan un valor por defecto. Todos los objetos tienen atributos (algunos con setter y getter), métodos (algunos con logica), y todos tienen una función `toString()` que debéis definir según se indica.
