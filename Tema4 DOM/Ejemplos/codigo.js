@@ -24,6 +24,17 @@ console.log(titulo.firstChild.nodeValue)
 //o mucho más seguro asi
 titulo.firstChild.nodeValue="Ejemplo Daw";
 
+
+var link = document.createElement('link'),
+     oldLink = document.getElementById('dynamic-favicon');
+ link.id = 'dynamic-favicon';
+ link.rel = 'shortcut icon';
+ link.href = "./img/shengon.jpg";
+ if (oldLink) {
+  document.head.removeChild(oldLink);
+ }
+ document.head.appendChild(link);
+
 console.log(titulo.nodeType);
 
 // for (let propiedad in titulo){ 
