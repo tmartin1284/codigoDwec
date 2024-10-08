@@ -17,9 +17,11 @@ document.title="pagi77na web de prueba";
  * ***************/
 console.log(document.getElementsByTagName("title")[0].text);
 let titulo= document.getElementsByTagName("title")[0];
+//podemos cambiar el titulo asi
 titulo.text="manolo, coñoo";
 console.log("el titulo tiene nodos: "+titulo.childNodes.length);
 console.log(titulo.firstChild.nodeValue)
+//o mucho más seguro asi
 titulo.firstChild.nodeValue="Ejemplo Daw";
 
 console.log(titulo.nodeType);
@@ -71,6 +73,35 @@ for (let card of cards){
  * 
  * children[] está obsoleto
  */
+
+
+/***
+ * 
+ * si os fijais, la web inicial, tenia 8 cards y mostramos 8 usuarios.
+ * 
+ * que vamos a hacer ahora??
+ * pues cogemos un card, el card0, lo guardamos como card de ejemplo, borramos todos los cards, 
+ * y vamos anexando cards con todos y cada uno de los personajes, que tengo
+ * 
+ */
+
+
+const rowCard= document.getElementsByClassName("row")[0]; //de 0, poqeue nos devuelve un array
+let colCardModelo=rowCard.childNodes[0];
+console.log(colCardModelo.nodeName);
+i =0;
+ //do colCardModelo=rowCard.childNodes[i++]; while (colCardModelo.nodeName!="DIV") //cojo el primer div que me encuentre
+
+ console.log(colCardModelo);
+
+
+// for (let col of rowCard.childNodes){  //fijaos aqui, que además de recuperar los 8 nodos div, me recupera los 8 espacios en blanco, como nodos de texto vacios
+
+//      console.log(col.nodeName+ col.nodeType)
+//      console.log(col.outerHTML)
+// }
+//      //rowCard.removeChild(col); // ahora elimino a todos los nodos. cuidado que me los cargo, salvo al primero, que esta guardado
+
 
 
 
