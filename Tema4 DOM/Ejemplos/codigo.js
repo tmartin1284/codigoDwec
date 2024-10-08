@@ -139,9 +139,14 @@ for (let personaje of personajes){
      nombre.childNodes[0].nodeValue=UpperFirst(personaje);
     let descr=copia.getElementsByTagName("p")[0];
      descr.firstChild.nodeValue="Descripción del personaje "+UpperFirst(personaje);
-     descr=copia.getElementsByTagName("p")[1];
-    descr.childNodes[0].nodeValue="más descripción de "+personaje;
-     
+     let descr2=copia.getElementsByTagName("p")[1];
+    descr2.childNodes[0].nodeValue="más descripción de "+personaje;
+     if (personaje=="goku"){  // es el mejor
+nombre.style.color = "lightblue";
+descr.style.color="lightblue";
+descr2.style.color="lightblue";
+copia.style.color="red";
+     }
 //y lo más importante, el objeto copia, lo metemos en el row card
 rowCard.appendChild(copia);
 
