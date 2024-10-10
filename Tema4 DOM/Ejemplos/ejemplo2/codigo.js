@@ -110,10 +110,10 @@ function procesarJSON(jsondata) {
     /**
      * y cambiamos los controladores, para que apunten al id del div que corresponden. 
      * los nuevos id son faciles, es el id del controlador (de la plantilla) más el id del equipo
+     * y ponemos el color de los botones del color del equipo, por supuesto
      */
     for (boton of tarjeta.getElementsByTagName("button")) {
-      boton.style.forecolor = equipo.color;
-      //
+      boton.style.backgroundColor = equipo.color;
       boton.setAttribute("data-bs-target",boton.getAttribute("data-bs-target")+"_"+equipo.id)
       boton.setAttribute("aria-controls",boton.getAttribute("aria-controls")+"_"+equipo.id)
     }
