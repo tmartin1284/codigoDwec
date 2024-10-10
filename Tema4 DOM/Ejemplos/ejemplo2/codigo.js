@@ -80,24 +80,28 @@ function procesarJSON(jsondata) {
      * y ya de paso, cambiamos los valores
      * 
     */
+   //con el video
     propiedad=document.getElementById("mcvideo");
     propiedad.setAttribute("id", "mcvideo_"+equipo.id)
     propiedad=propiedad.getElementsByTagName("source")[0];
     propiedad.setAttribute("src",equipo.video);
+    //con el poster
     propiedad=document.getElementById("mcposter");
     propiedad.setAttribute("id", "mcposter_"+equipo.id);
     propiedad=propiedad.getElementsByTagName("img")[0];
     propiedad.setAttribute("src",equipo.poster);
+    //con el entrenador
     propiedad=document.getElementById("mcentrenador");
         //hago lo mismo, pero un poco más comprimido
     propiedad.setAttribute("id", "mcentrenador_"+equipo.id)
     propiedad.getElementsByTagName("img")[0].setAttribute("src",equipo.imagenentrenador);
     propiedad.getElementsByTagName("p")[0].childNodes[0].nodeValue=equipo.nombreentrenador;
+    //con el presidente
     propiedad=document.getElementById("mcpresidente");
     propiedad.setAttribute("id", "mcpresidente_"+equipo.id)
     propiedad.getElementsByTagName("img")[0].setAttribute("src",equipo.imagenpresidente);
     propiedad.getElementsByTagName("p")[0].childNodes[0].nodeValue=equipo.nombrepresidente;
-
+//con la ultima
     propiedad=document.getElementById("mcmas");
     propiedad.setAttribute("id", "mcmas_"+equipo.id)
     propiedad.getElementsByTagName("p")[0].childNodes[0].nodeValue="El equipo tiene un presupuesto de "+equipo.presupuesto+" millones de Euros."
@@ -116,18 +120,9 @@ function procesarJSON(jsondata) {
 
     
 
-   
-
-
-
-
-
-    console.log(tarjeta.outerHTML);
-
-
-
   }
 
 
+  console.log(contenedor.outerHTML);
 
 }
