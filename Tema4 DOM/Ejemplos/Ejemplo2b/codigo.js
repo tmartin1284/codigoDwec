@@ -12,7 +12,8 @@ fetch('./data/team.json')
   .then(response => {
     return response.json();
   })
-  .then(jsondata => procesarJSON(jsondata));
+  .then(jsondata => procesarJSON(jsondata))
+  .catch(e => {console.log(e)});
 
 
 function procesarJSON(jsondata) {
@@ -52,7 +53,6 @@ function procesarJSON(jsondata) {
   for (data in jsondata.teams) {
     let equipo = jsondata.teams[data];
 
-
     /**
      * importante, a partir de ahora, vamos recuperando los elementos uno a uno usando el getElementbyID (todos tienen un id diferente), y mucho ojo, 
      * tendremos que cambiar el id a la hora de meterlo en el elemento equipo, porque si no, todos los equipos tendrian los mismos id...
@@ -63,7 +63,7 @@ function procesarJSON(jsondata) {
 
 
     tarjeta.setAttribute("id", "equipo_" + equipo.id);
-    console.log(tarjeta.outerHTML);
+   
 
     let propiedad = document.getElementById("imagen"); //cuidao, voy a utilizar propiedad como una variable para guardar todos los elementos que recupere
     propiedad.setAttribute("id", "imagen_" + equipo.id);
@@ -121,20 +121,18 @@ function procesarJSON(jsondata) {
      */
     for (boton of tarjeta.getElementsByTagName("button")) {
       boton.style.backgroundColor = equipo.color;
-     // boton.styel.color= $('#FFFFFF')
-      boton.setAttribute("data-bs-target",boton.getAttribute("data-bs-target")+"_"+equipo.id)
-      boton.setAttribute("id",boton.getAttribute("id")+"_"+equipo.id)
+      boton.style.color= "#"+ Number (0xffffff- ("0x"+equipo.color.slice(1,7))).toString(16).toUpperCase();
+      boton.setAttribute("data-bs-target",boton.getAttribute("data-bs-target")+"_"+equipo.id);
+      boton.setAttribute("id",boton.getAttribute("id")+"_"+equipo.id);
     }
 
-    
+    console.log("0x"+ Number (0xffffff- ("0x"+equipo.color.slice(1,7))).toString(16).toUpperCase())
 
   }
 
 
-  console.log(contenedor.outerHTML);
+ // console.log(contenedor.outerHTML);
 
 }
 
 
-
-function cerrar
