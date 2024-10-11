@@ -129,10 +129,5 @@ function procesarJSON(jsondata) {
     console.log("0x"+ Number (0xffffff- ("0x"+equipo.color.slice(1,7))).toString(16).toUpperCase())
 
   }
-
-
- // console.log(contenedor.outerHTML);
-
 }
-
 
