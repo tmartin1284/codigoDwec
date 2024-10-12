@@ -121,13 +121,28 @@ function procesarJSON(jsondata) {
      */
     for (boton of tarjeta.getElementsByTagName("button")) {
       boton.style.backgroundColor = equipo.color;
-      boton.style.color= "#"+ Number (0xffffff- ("0x"+equipo.color.slice(1,7))).toString(16).toUpperCase();
+      boton.style.color= "#"+ Number (0xffffff- ("0x"+equipo.color.slice(1,7))).toString(16).toUpperCase();//cuidao para hacer el cambio de colro
       boton.setAttribute("data-bs-target",boton.getAttribute("data-bs-target")+"_"+equipo.id);
       boton.setAttribute("id",boton.getAttribute("id")+"_"+equipo.id);
     }
 
-    console.log("0x"+ Number (0xffffff- ("0x"+equipo.color.slice(1,7))).toString(16).toUpperCase())
 
   }
+
+
+  const a = document.createElement("a");
+  const archivo = new Blob([`<!doctype html>
+                             <html lang="en">
+                            `+document.head.outerHTML + document.body.outerHTML +`
+                             </html>`], 
+                             { type: 'html' });
+  const url = URL.createObjectURL(archivo);
+  a.href = url;
+  a.download = "statico.html";
+  a.innerHTML="descarga el htlm que has creado con js y el dom"
+document.getElementsByTagName("footer")[0].appendChild(a);
+
+
+
 }
 
