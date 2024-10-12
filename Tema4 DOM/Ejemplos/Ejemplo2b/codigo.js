@@ -133,7 +133,8 @@ function procesarJSON(jsondata) {
   const a = document.createElement("a");
   const archivo = new Blob([`<!doctype html>
                              <html lang="en">
-                            `+document.head.outerHTML + document.body.outerHTML +`
+                            `+document.head.outerHTML + `
+                            `+document.body.outerHTML +`
                              </html>`], 
                              { type: 'html' });
   const url = URL.createObjectURL(archivo);
