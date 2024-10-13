@@ -13,7 +13,7 @@ fetch('./data/team.json')
     return response.json();
   })
   .then(jsondata => procesarJSON(jsondata))
-  .catch(e => {console.log(e)});
+  .catch(e => { console.log(e) });
 
 
 function procesarJSON(jsondata) {
@@ -63,7 +63,7 @@ function procesarJSON(jsondata) {
 
 
     tarjeta.setAttribute("id", "equipo_" + equipo.id);
-   
+
 
     let propiedad = document.getElementById("imagen"); //cuidao, voy a utilizar propiedad como una variable para guardar todos los elementos que recupere
     propiedad.setAttribute("id", "imagen_" + equipo.id);
@@ -72,7 +72,7 @@ function procesarJSON(jsondata) {
 
     propiedad = document.getElementById("nombre");
     propiedad.setAttribute("id", "nombre_" + equipo.id);
-    propiedad.childNodes[0].nodeValue="Equipo: "+equipo.nombre;
+    propiedad.childNodes[0].nodeValue = "Equipo: " + equipo.nombre;
     //propiedad.firstchild.nodeValue(equipo.nombre);  //y esto peta... manda cojones
 
     /**cambiamos los identificadores de los desplegables, de todos.
@@ -80,39 +80,39 @@ function procesarJSON(jsondata) {
      * y ya de paso, cambiamos los valores
      * 
     */
-   //con el video
-    propiedad=document.getElementById("mcvideo");
-    propiedad.setAttribute("id", "mcvideo_"+equipo.id)
-    propiedad=propiedad.getElementsByTagName("source")[0];
-    propiedad.setAttribute("src",equipo.video);
-    
+    //con el video
+    propiedad = document.getElementById("mcvideo");
+    propiedad.setAttribute("id", "mcvideo_" + equipo.id)
+    propiedad = propiedad.getElementsByTagName("source")[0];
+    propiedad.setAttribute("src", equipo.video);
+
     //con el poster
-    propiedad=document.getElementById("mcposter");
-    propiedad.setAttribute("id", "mcposter_"+equipo.id);
-    propiedad=propiedad.getElementsByTagName("img")[0];
-    propiedad.setAttribute("src",equipo.poster);
+    propiedad = document.getElementById("mcposter");
+    propiedad.setAttribute("id", "mcposter_" + equipo.id);
+    propiedad = propiedad.getElementsByTagName("img")[0];
+    propiedad.setAttribute("src", equipo.poster);
 
-   
+
     //con el entrenador
-    propiedad=document.getElementById("mcentrenador");
-        //hago lo mismo, pero un poco más comprimido
-    propiedad.setAttribute("id", "mcentrenador_"+equipo.id)
-    propiedad.getElementsByTagName("img")[0].setAttribute("src",equipo.imagenentrenador);
-    propiedad.getElementsByTagName("p")[0].childNodes[0].nodeValue=equipo.nombreentrenador;
+    propiedad = document.getElementById("mcentrenador");
+    //hago lo mismo, pero un poco más comprimido
+    propiedad.setAttribute("id", "mcentrenador_" + equipo.id)
+    propiedad.getElementsByTagName("img")[0].setAttribute("src", equipo.imagenentrenador);
+    propiedad.getElementsByTagName("p")[0].childNodes[0].nodeValue = equipo.nombreentrenador;
 
-  
+
     //con el presidente
-    propiedad=document.getElementById("mcpresidente");
-    propiedad.setAttribute("id", "mcpresidente_"+equipo.id)
-    propiedad.getElementsByTagName("img")[0].setAttribute("src",equipo.imagenpresidente);
-    propiedad.getElementsByTagName("p")[0].childNodes[0].nodeValue=equipo.nombrepresidente;
+    propiedad = document.getElementById("mcpresidente");
+    propiedad.setAttribute("id", "mcpresidente_" + equipo.id)
+    propiedad.getElementsByTagName("img")[0].setAttribute("src", equipo.imagenpresidente);
+    propiedad.getElementsByTagName("p")[0].childNodes[0].nodeValue = equipo.nombrepresidente;
 
-   
-//con la ultima
-    propiedad=document.getElementById("mcotros");
-    propiedad.setAttribute("id", "mcotros_"+equipo.id)
-    propiedad.getElementsByTagName("p")[0].childNodes[0].nodeValue="El equipo tiene un presupuesto de "+equipo.presupuesto+" millones de Euros."
-    propiedad.getElementsByTagName("p")[1].childNodes[0].nodeValue="En la Liga Kings of Legends, el equipo usa la abreviatura " +equipo.abr;
+
+    //con la ultima
+    propiedad = document.getElementById("mcotros");
+    propiedad.setAttribute("id", "mcotros_" + equipo.id)
+    propiedad.getElementsByTagName("p")[0].childNodes[0].nodeValue = "El equipo tiene un presupuesto de " + equipo.presupuesto + " millones de Euros."
+    propiedad.getElementsByTagName("p")[1].childNodes[0].nodeValue = "En la Liga Kings of Legends, el equipo usa la abreviatura " + equipo.abr;
 
     /**
      * y cambiamos los controladores, para que apunten al id del div que corresponden. 
@@ -121,9 +121,9 @@ function procesarJSON(jsondata) {
      */
     for (boton of tarjeta.getElementsByTagName("button")) {
       boton.style.backgroundColor = equipo.color;
-      boton.style.color= "#"+ Number (0xffffff- ("0x"+equipo.color.slice(1,7))).toString(16).toUpperCase();//cuidao para hacer el cambio de colro
-      boton.setAttribute("data-bs-target",boton.getAttribute("data-bs-target")+"_"+equipo.id);
-      boton.setAttribute("id",boton.getAttribute("id")+"_"+equipo.id);
+      boton.style.color = "#" + Number(0xffffff - ("0x" + equipo.color.slice(1, 7))).toString(16).toUpperCase();//cuidao para hacer el cambio de colro
+      boton.setAttribute("data-bs-target", boton.getAttribute("data-bs-target") + "_" + equipo.id);
+      boton.setAttribute("id", boton.getAttribute("id") + "_" + equipo.id);
     }
 
 
@@ -131,20 +131,33 @@ function procesarJSON(jsondata) {
 
 
   const a = document.createElement("a");
+  //cuidadiinn joorrlll, que estamos con un literal de cadena
   const archivo = new Blob([`
   <!doctype html>
   <html lang="en">
-  `+document.head.outerHTML + `
+  `+ document.head.outerHTML + `
+
+
+
+
   <!-- Todo lo que viene ahora lo has creado tu solit@ con javascript y jugando con el DOM
        y esto solo la punta del iceberg de todo lo que vas a crear!!!
-       venga" vamos a por ello  -->
-  `+document.body.outerHTML +`
+       venga! vamos a por ello  -->
+
+
+
+
+
+
+
+
+  `+ document.body.outerHTML + `
   </html>`], { type: 'html' });
   const url = URL.createObjectURL(archivo);
   a.href = url;
   a.download = "statico.html";
-  a.innerHTML="descarga el htlm que has creado con js y el dom"
-document.getElementsByTagName("footer")[0].appendChild(a);
+  a.innerHTML = "descarga el htlm que has creado con js y el dom"
+  document.getElementsByTagName("footer")[0].appendChild(a);
 
 
 
