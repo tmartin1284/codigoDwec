@@ -50,8 +50,8 @@ function procesarJSON(jsondata) {
   let contenedor = plantilla.parentNode;
   contenedor.removeChild(plantilla);
 
-  for (data in jsondata.teams) {
-    let equipo = jsondata.teams[data];
+  for (i in jsondata.teams) {
+    let equipo = jsondata.teams[i];
 
     /**
      * importante, a partir de ahora, vamos recuperando los elementos uno a uno usando el getElementbyID (todos tienen un id diferente), y mucho ojo, 
