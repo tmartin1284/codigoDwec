@@ -62,10 +62,10 @@
 
                function establecertamano(num,  element ) {
                     if (!element) element = document.body;
-                    console.log(element.tagName);
-                    console.log(element.style.fontsize);
+                    console.log(element+"  "+ num);
+                    console.log("estilo" + element.style);
                     element.style.fontsize = element.style.fontsize + num;
-                    element.childNodes.forEach(hijo => { establecertamano(num, hijo) });
+                    element.childNodes.forEach(hijo => { if (hijo) establecertamano(++num, hijo) });
                     consonle.log(num);
                }
 
