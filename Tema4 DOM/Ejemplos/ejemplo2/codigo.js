@@ -1,5 +1,4 @@
 
-
 /**
  * con esto leemos el archivo json. ahora mismo nos suena un poco raro.. usa dos promesas (asincronas etc)
  * de momento, sabed que esto funciona y ya esta
@@ -123,6 +122,8 @@ function procesarJSON(jsondata) {
   }
 
 
-  console.log(contenedor.outerHTML);
+  const fecha=new Date ();
+  console.log(format(fecha,"full"));
+
 
 }

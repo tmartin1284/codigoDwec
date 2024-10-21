@@ -68,11 +68,15 @@ function procesarJSON(jsondata) {
     let propiedad = document.getElementById("imagen"); //cuidao, voy a utilizar propiedad como una variable para guardar todos los elementos que recupere
     propiedad.setAttribute("id", "imagen_" + equipo.id);
     propiedad.setAttribute("src", equipo.escudo);
+    propiedad=propiedad.parentNode;
+propiedad.classList.replace("card-img-top","card-img-bottom");
+
 
 
     propiedad = document.getElementById("nombre");
     propiedad.setAttribute("id", "nombre_" + equipo.id);
     propiedad.childNodes[0].nodeValue = "Equipo: " + equipo.nombre;
+    propiedad.style.color= "brown";
     //propiedad.firstchild.nodeValue(equipo.nombre);  //y esto peta... manda cojones
 
     /**cambiamos los identificadores de los desplegables, de todos.
@@ -99,7 +103,7 @@ function procesarJSON(jsondata) {
     propiedad.setAttribute("id", "mcentrenador_" + equipo.id)
     propiedad.getElementsByTagName("img")[0].setAttribute("src", equipo.imagenentrenador);
     propiedad.getElementsByTagName("p")[0].childNodes[0].nodeValue = equipo.nombreentrenador;
-
+    propiedad.getElementsByTagName("p")[0].style.color= "green"
 
     //con el presidente
     propiedad = document.getElementById("mcpresidente");
@@ -122,8 +126,10 @@ function procesarJSON(jsondata) {
     for (boton of tarjeta.getElementsByTagName("button")) {
       boton.style.backgroundColor = equipo.color;
       boton.style.color = "#" + Number(0xffffff - ("0x" + equipo.color.slice(1, 7))).toString(16).toUpperCase();//cuidao para hacer el cambio de colro
+      boton.style.style= "white";
       boton.setAttribute("data-bs-target", boton.getAttribute("data-bs-target") + "_" + equipo.id);
       boton.setAttribute("id", boton.getAttribute("id") + "_" + equipo.id);
+      
     }
 
 
@@ -143,7 +149,6 @@ function procesarJSON(jsondata) {
   <!-- Todo lo que viene ahora lo has creado tu solit@ con javascript y jugando con el DOM
        y esto solo la punta del iceberg de todo lo que vas a crear!!!
        venga! vamos a por ello  -->
-
 
 
 
