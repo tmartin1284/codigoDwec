@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+        <div class="alert alert-info" role="alert">
+        </div>
+    </div>
+
+    <script>
+        const radio = prompt('Introduce el radio del círculo: ');
+        const alerta = document.querySelector(".alert");
+
+        if (!isNaN(radio)) //si es un número
+        {
+            // area = PI * R^2
+            let area = Math.PI * Math.pow(radio,2);
+            area = area.toFixed(2);
+            alerta.innerHTML = `El área del círculo de radio ${radio} es ${area}`;
+
+        }else
+        {
+            alerta.classList = 'alert alert-danger';
+            alerta.innerHTML = 'No has introducido un número';
+        }
+
+    </script>
+      
+  </body>
+</html>

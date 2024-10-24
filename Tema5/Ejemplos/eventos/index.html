@@ -25,13 +25,13 @@
                <li>Elemento 3</li>
           </ul>
           <div id="tamano">
-               <p>
+               <p  style="font-size:large; color: green">
                     <button id="aumentar">Aumentar</button>
                     <button id="disminuir">Disminuir</button>
                </p>
           </div>
           <div id="mostrar">
-               <p> </p>
+               <p> ffd</p>
 
           </div>
 
@@ -41,8 +41,10 @@
                const lista2 = document.getElementById('tamano');
                lista2.addEventListener('click', function (evento) {
                     if (evento.target.tagName === 'BUTTON') {
-                          if (evento.target.id === "aumentar") establecertamano(1, null);
-                          if (evento.target.id === "disminuir") establecertamano(-1, null);
+
+                          if (evento.target.id === "aumentar") document.getElementById("mostrar").childNodes[1].style.fontsize = "x-large"
+                          if (evento.target.id === "disminuir") document.getElementById("mostrar").childNodes[1].style.fontsize = "small"
+                          console.log (document.getElementById("mostrar").childNodes[1])
                     }
                });
 
@@ -53,21 +55,14 @@
                     if (evento.target.tagName === 'LI') {
                          console.log('Clic en:', evento.target.textContent);
 
-                         document.getElementById("mostrar").childNodes[0].textContent = evento.target.textContent;
+                         document.getElementById("mostrar").childNodes[1].childNodes[0] = evento.target.textContent;
                     }
                });
 
 
 
 
-               function establecertamano(num,  element ) {
-                    if (!element) element = document.body;
-                    console.log(element+"  "+ num);
-                    console.log("estilo" + element.style);
-                    element.style.fontsize = element.style.fontsize + num;
-                    element.childNodes.forEach(hijo => { if (hijo) establecertamano(++num, hijo) });
-                    consonle.log(num);
-               }
+              
 
 
 

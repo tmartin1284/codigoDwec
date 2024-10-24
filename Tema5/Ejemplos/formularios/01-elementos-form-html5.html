@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos formulario nuevos HTML5</title>
+
+    <!-- <link rel="stylesheet" href="00-estilo.css"> -->
+</head>
+
+<body>
+    <div class="contenedor">
+        <form action="./datows.php" method="get">
+            <!-- Es buena idea agrupar la etiqueta de un control y el control input en un mismo div
+            y que coincida el campo for del label con el id del input 
+            la propiedad name será para luego mandar el valor-->
+
+            <h2>Controles input HTML5</h2>
+            <div class="form-group">
+                <label for="correo">E-mail:</label>
+                <input type="email" name="correo" id="correo" autofocus>
+            </div>
+            <div class="form-group">
+                <label for="busqueda">Búsqueda</label>
+                <input type="search" name="busqueda" id="busqueda">
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" name="telefono" id="telefono">
+            </div>
+            <div class="form-group">
+                <label for="url">Ingresa URL:</label>
+                <input type="url" name="url" id="url">
+            </div>
+            <div class="form-group">
+                <label for="edad">Ingresa edad:</label>
+                <input type="number" name="edad" id="edad" min="1" max="10">
+            </div>
+
+            <div class="form-group">
+                <label for="price">Choose a maximum house price: </label>
+                <input type="range" name="price" id="price" min="50000" max="500000" step="100" value="250000">
+                <output class="price-output" for="price"></output>
+            </div>
+            <div class="form-group">
+                <input type="datetime-local" name="datetime" id="datetime">
+            </div>
+            <div class="form-group">
+                <input type="month" name="month" id="month">
+            </div>
+            <div class="form-group">
+                <input type="time" name="time" id="time">
+            </div>
+            <div class="form-group">
+                <input type="week" name="week" id="week">
+            </div>
+            <div class="form-group">
+                <label for="myDate">When are you available this summer?</label>
+                <input type="date" name="myDate" min="2013-06-01" max="2013-08-31" step="7" id="myDate">
+            </div>
+            <div class="form-group">
+                <label for="color">Selecciona un color:</label>
+                <input type="color" name="color" id="color">
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Enviar datos</button>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+
+        //este código es necesario para mostrar en el output el valor del slided type="range"
+        const price = document.querySelector('#price')
+        const output = document.querySelector('.price-output')
+
+        output.textContent = price.value
+
+        price.addEventListener('input', function () {
+            output.textContent = price.value
+        });
+
+    </script>
+
+</body>
+
+</html>

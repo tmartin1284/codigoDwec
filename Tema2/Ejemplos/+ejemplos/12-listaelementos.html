@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista elementos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="row mb-4">
+            <button id="btn-anadir" type="button" class="btn btn-primary">Añadir</button>
+        </div>
+        <div id="alertas">
+        </div>
+    </div>
+
+
+
+    <script>
+        document.getElementById("btn-anadir").onclick = insertar;
+
+
+        function insertar() {
+            const texto = prompt('Introduzca tarea a realizar: ');
+            const listaAlertas = document.querySelector("#alertas");
+
+            //creamos un TextNode
+            const nodoTexto = document.createTextNode(texto);
+            //Creamos un elemento DIv
+            const alerta = document.createElement("div");
+            //Añadimos el textnode al div
+            alerta.appendChild(nodoTexto);
+
+            //le añadimos clas clases a la alerta
+            alerta.classList = "alert alert-primary";
+
+            //añadimos la alerta al div contenedor de alertas
+            listaAlertas.appendChild(alerta);
+        }
+
+    </script>
+
+</body>
+
+</html>

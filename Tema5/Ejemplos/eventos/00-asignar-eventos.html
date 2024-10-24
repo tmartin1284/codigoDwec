@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- de este modo podemos asignar un código  -->
+    <button onmouseover="alert('has pasado por encima del botón')">Pasa por encima</button>
+
+    <button id="btn1">Púlsame</button>
+    <button id="btn2">Entra y sal</button>
+    <button id="btn3">Coordenadas</button>
+
+    <label for="y">X: </label>
+    <input id="x" name="x" type="text">
+    <label for="y">Y: </label>
+    <input id="y" name="y" type="text">
+
+
+    <script>
+        //En este ejemplo veremos qué maneras hay de asociar manejadores a eventos
+
+        const boton = document.querySelector("#btn1");
+        //la manera más actual de hacerlo es con la función addEvent Listener
+        boton.addEventListener("click", function (evento) {
+            console.log(evento); //mostramos información del evento
+            alert("Has pulsado el botón");
+        });
+
+
+        //de este otro modo también podemos. De esta manera el evento también comienza con "on"
+        const boton2 = document.querySelector("#btn2");
+        boton2.onmouseleave = function (evento) {
+            console.log(evento);
+            alert("has salido del botón");
+        };
+
+
+        //esta función manejadora la podemos invocar asociándola a un evento. 
+        //la función muestra en los elementos input las coordenadas del puntero del ratón
+        function coordenadas(evento) {
+            //console.log(evento);
+            //console.log(`X: ${evento.screenX} Y:${evento.screenY}`);
+            document.getElementById("x").value = evento.screenX;
+            document.getElementById("y").value = evento.screenY;
+        }
+
+        //asociamos la función coordenadas al evento click del botón 3
+        document.querySelector("#btn3").addEventListener("click", coordenadas);
+
+        //podemos asociar la misma función a otro evento de otro elemento
+        //document.onmousemove = coordenadas;
+
+
+
+
+
+    </script>
+</body>
+
+</html>

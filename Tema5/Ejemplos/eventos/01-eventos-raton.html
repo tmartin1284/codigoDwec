@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="parrafo">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+    </div>
+    <div class="parrafo">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+    </div>
+    <div class="parrafo">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+    </div>
+
+    <script>
+        //En este ejemplo asignaremos el manejador de evento a varios elementos del DOM
+
+        //De esta manera solo seleccionamríamos un elemento:
+        //const divs = document.querySelectorAll(".parrafo");
+
+        //esta sería la manera de seleccionar todos los elementos de una clase
+        const divs = document.querySelectorAll(".parrafo");
+
+        //declaramos una función que nos devuelve un número aleatorio entre 0 y un máximo dado
+        const aleatorio = max => {
+            return Math.round(Math.random() * max);
+        }
+
+        //esta función ha de crear un color aleatorio y asociarlo al color del fondo del elemento
+        const cambiaColor = function (e) {
+            //creamos un array de 3 posiciones que tendrá las 3 componentes de un color 
+            //RGB de forma aleatoria con la función declarada arriba
+            const color = new Array(aleatorio(255), aleatorio(255), aleatorio(255));
+            //this hace referencia al elemento que ha generado el evento
+            //la propiedad style nos permite modificar el estilo del elemento
+            this.style.backgroundColor = `rgb(${color[0]},${color[1]},${color[2]})`;
+        }
+
+        //Así sólo podemos asociar la función a un solo elemento, 
+        //divs.addEventListener("mouseover", cambiaColor);
+
+        //para asociarlo a cada uno hay que recorrer el arrar de elementos
+        divs.forEach(div => {
+            div.addEventListener("mouseover", cambiaColor);
+        });
+
+
+
+    </script>
+</body>
+
+
+</html>

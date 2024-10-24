@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Párrafo 1</p>
+    <p>Párrafo 2</p>
+    <p>Párrafo 3</p>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", e => {
+            console.log(document);
+
+            //acceder al elemento raíz de la página
+            const objHTML = document.documentElement;
+
+            //el primer hijo de dicho objeto sería el HEAD
+            const objHead = objHTML.firstChild;
+            //el último objeto sería el body
+            const objBody = objHTML.lastChild;
+
+            const hijosHead = objHead.childNodes;
+            const numHijosHead = objHead.childNodes.length;
+
+            console.log(objHTML);
+            console.log(hijosHead);
+            console.log(numHijosHead);
+
+            const numHijosBody = objBody.childNodes.length;
+            const hijosBody = objBody.childNodes;
+
+            console.log(hijosBody);
+            console.log(numHijosBody);
+
+            const primerHijoBody = objBody.firstChild;
+            const cuartoHijoBody = objBody.childNodes[3];
+
+            console.log(primerHijoBody);
+            console.log(cuartoHijoBody);
+
+            //podemos acceder al padre de un elemento
+            const padre = cuartoHijoBody.parentNode;
+
+            console.log(padre);
+
+            //devuelve el tipo de nodo según lo definido en las constantes
+            console.log(document.nodeType);       //  9
+            console.log(objHTML.nodeType);        //  1
+            console.log(objBody.nodeType);        //  1
+            console.log(primerHijoBody.nodeType);  //  3
+            console.log(cuartoHijoBody.nodeType);  //  1
+
+            const parrafos = objBody.getElementsByTagName("p");
+            console.log(parrafos);
+            console.log(parrafos[1]);
+            parrafos[1].style.backgroundColor = "green";
+
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+    </div>
+
+    <script>
+
+        const contenedor = document.querySelector(".container");
+
+        //Creamos un nuevo elemento div
+        const nuevo_div = document.createElement("div");
+        //creamos un nuevo nodo de texto 
+        let nodoTexto = document.createTextNode("Este es el texto nuevo");
+        //Añadimos el nodo de texto dentro del div
+        nuevo_div.appendChild(nodoTexto);
+        console.log(nuevo_div);
+
+        const encabezado = document.createElement("h1");
+        nodoTexto = document.createTextNode("Título de la página");
+        encabezado.appendChild(nodoTexto);
+
+        //enganchamos el nuevo div dentro del contenedor
+        contenedor.appendChild(encabezado);
+        contenedor.appendChild(nuevo_div);
+
+
+    </script>
+</body>
+
+</html>

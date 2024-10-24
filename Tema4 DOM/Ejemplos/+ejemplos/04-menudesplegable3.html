@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú desplegable</title>
+
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+            text-decoration: none;
+            list-style-type: none;
+            font-family: sans-serif;
+
+        }
+
+        #menu li a {
+            display: block;
+            color: black;
+            padding: .5em;
+        }
+
+        #menu>ul>li>a {
+            background: #C8FFAD;
+        }
+
+        #menu li ul {
+            background: #E4ADFF;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="menu">
+        <ul>
+            <li>
+                <a href="#">Item 1</a>
+                <ul>
+                    <li><a href="#">Opción 1</a></li>
+                    <li><a href="#">Opción 2</a></li>
+                    <li class="separador"></li>
+                    <li><a href="#">Opción 3</a></li>
+                    <li><a href="#">Opción 4</a></li>
+                    <li><a href="#">Opción 5</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Item 2</a>
+                <ul>
+                    <li><a href="#">Opción 1</a></li>
+                    <li class="separador"></li>
+                    <li><a href="#">Opción 2</a></li>
+                    <li><a href="#">Opción 3</a></li>
+                    <li><a href="#">Opción 4</a></li>
+                    <li><a href="#">Opción 5</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Item 3</a>
+                <ul>
+                    <li><a href="#">Opción 1</a></li>
+                    <li><a href="#">Opción 2</a></li>
+                    <li><a href="#">Opción 3</a></li>
+                    <li class="separador"></li>
+                    <li><a href="#">Opción 4</a></li>
+                    <li><a href="#">Opción 5</a></li>
+                    <li class="separador"></li>
+                    <li><a href="#">Opción 1</a></li>
+                    <li><a href="#">Opción 2</a></li>
+                    <li><a href="#">Opción 3</a></li>
+                </ul>
+            </li>
+
+
+        </ul>
+
+    </nav>
+
+
+    <script>
+        //se trata de crear una función que invoquemos cuando pulsemos en cualquier enlace de primer nivel
+        //la función mostrará u ocultará el UL asociado 
+
+        //En esta ocasión lo haremos creando una nueva clase "mostrar" y quitando y poniendo la clase
+        //podemos hacerlo accediendo a las funciones de la propiedad classList
+
+        //lo complicaremos un poco el anterior
+        //en este caso queremos que solo se muestre un bloque de menú a la vez, por lo que 
+        //habrá que comprobar si donde picamos se muestra y si hay algún otro mostrado para cerrarlo
+        //jugaremos con los metodos de classList, pero aquí ya no nos vale toggle
+        // podemos usar .contains(), .add("clase") y .remove("clase");
+
+
+
+
+    </script>
+
+</body>
+
+</html>

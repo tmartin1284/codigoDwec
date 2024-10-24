@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkboxes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <img class="card-img-top" src="holder.js/100x180/" alt="">
+            <div class="card-body">
+                <h4 class="card-title">Seleccionar varios checkbox y marcarlos</h4>
+                <p class="card-text">Tenemos que hacer en JS una función que invoquemos para marcar todas las opciones y
+                    otra que invoquemos para desmarcar todas las opciones</p><br>
+                <div class="publi">
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" name="acepta1" id="acepta1" value="acepta1">
+                            Acepta las condiciones 1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" name="acepta2" id="acepta2" value="acepta2">
+                            Acepta las condiciones 2
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" name="acepta3" id="acepta3" value="acepta3">
+                            Acepta las condiciones 3
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" name="acepta4" id="acepta4" value="acepta4">
+                            Acepta las condiciones 4
+                        </label>
+                    </div>
+                </div>
+
+
+                <button type="button" class="btn btn-primary">Marcar Todas</button>
+                <button type="button" class="btn btn-danger">Desmarcar Todas</button>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        window.addEventListener("load", e => {
+            const cks = document.querySelectorAll(".publi input[type='checkbox']");
+            console.log(cks);
+
+            function marcarTodas() {
+                cks.forEach(element => {
+                    element.checked = 1;
+                });
+            }
+            function desMarcarTodas() {
+                cks.forEach(element => {
+                    element.checked = 0;
+                });
+            }
+
+
+
+
+        });
+
+    </script>
+</body>
+
+</html>
