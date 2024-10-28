@@ -54,6 +54,22 @@
           .tecla.space {
                width: 210px;
           }
+
+
+          .tecla {
+               width: 40px;
+               height: 40px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               background-color: #ddd;
+               border: 1px solid #aaa;
+               border-radius: 4px;
+               font-size: 16px;
+               cursor: pointer;
+               user-select: none;
+          }
+
      </style>
 </head>
 
@@ -132,6 +148,9 @@
           <div id="alt-right" class="tecla ancho">Alt</div>
           <div id="ctrl-right" class="tecla ancho">Ctrl</div>
      </div>
+     <div>
+          <p id="mostrar"></p>
+     </div>
 
      <script>
 
@@ -155,13 +174,16 @@
 
           function pulsar(event) {
                console.log("aprieta" + event.key);
-              if (tecla= document.getElementById(event.key))tecla.classList.replace("tecla", "teclapul")
+              if (tecla= document.getElementById(event.key)){
+               tecla.classList.replace("tecla", "teclapul");
+               document.getElementById("mostrar").textContent=event.key;
+              }
 
           }
 
           function soltar(event) {
                console.log("suelta" + event.key);
-               if (tecla =document.getElementById(event.key))tecla.classList.replace("teclapul", "tecla")
+               if (tecla =document.getElementById(event.key))tecla.classList.replace("teclapul", "tecla");
           }
 
 
