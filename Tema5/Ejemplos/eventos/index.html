@@ -24,37 +24,20 @@
                <li>Elemento 2</li>
                <li>Elemento 3</li>
           </ul>
-          <div id="tamano">
-               <p  style="font-size:large; color: green">
-                    <button id="aumentar">Aumentar</button>
-                    <button id="disminuir">Disminuir</button>
-               </p>
-          </div>
-          <div id="mostrar">
-               <p> ffd</p>
-
-          </div>
-
+          
 
 
           <script>
-              
-
-
 
                const lista = document.getElementById('lista');
                lista.addEventListener('click', function (evento) {
                     if (evento.target.tagName === 'LI') {
                          console.log('Clic en:', evento.target.textContent);
-
-                         document.getElementById("mostrar").childNodes[1].childNodes[0] = evento.target.textContent;
                     }
                });
 
 
 
-
-              
 
 
 

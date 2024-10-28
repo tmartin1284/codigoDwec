@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Ejercicio Simple de Eventos de Teclado</title>
+     <style>
+          body {
+               font-family: Arial, sans-serif;
+               text-align: center;
+          }
+
+          #azul {
+               position: relative;
+               width: 50px;
+               height: 50px;
+               background-color: blue;
+               margin-top: 20px;
+               transition: 0.2s ease-out;
+          }
+
+          #verde {
+               position: relative;
+               width: 50px;
+               height: 50px;
+               background-color: green;
+               margin-top: 20px;
+               transition: 0.2s ease-out;
+          }
+     </style>
+</head>
+
+<body>
+     <h2>Pica el cuadro <p id="contador">0</p>
+     </h2>
+     <div id="azul"></div>
+     <div id="verde"></div>
+     <script>
+
+          /**
+           * 
+           * vamos a hacer un bosu. el juego este en el que aparece un cuadrado en la pantalla, y si le haces clik te da puntos
+
+           */
+
+
+          //primero pintamos aleatoriamente el azul y el verde
+
+          const verde = document.getElementById("verde"), azul = document.getElementById("azul"), contador = document.getElementById("contador");
+
+     
+
+
+
+          setInterval(() => {
+               azul.style.top = `${Math.round(Math.random() * 550)}px`;
+               azul.style.left = `${Math.round(Math.random() * 1200)}px`;
+               console.log ("pinto "+ azul.id)
+          }, 800);
+          
+
+          setInterval(() => {
+               verde.style.top = `${Math.round(Math.random() * 550)}px`;
+               verde.style.left = `${Math.round(Math.random() * 1200)}px`;
+               console.log ("pinto "+ verde.id)
+          }, 400);
+          
+
+          document.addEventListener("click", puntos);
+
+
+          function puntos(event) {
+
+               let puntos = parseInt(contador.textContent);
+
+               if (event.target.id === "azul")
+                    puntos += 2;
+
+               if (event.target.id === "verde")
+                    puntos += 5;
+
+               contador.textContent = puntos;
+
+          }
+
+
+
+
+
+          const personaje = document.getElementById('personaje');
+
+     </script>
+</body>
+
+</html>

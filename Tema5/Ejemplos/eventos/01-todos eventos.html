@@ -51,9 +51,15 @@
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
         laborum.
     </div>
- 
+    <input type="text" name="hola" id="hola" \>
+    <div>
+        <p id="contar">0</p>
+    </div>
+    <div>
+        <p id="veloc">0</p>
+    </div>
 
-  
+
 
 
     <script>
@@ -92,6 +98,26 @@
 
 
 
+
+        const eventos = [
+            "click", "dblclick", "mousedown", "mouseup", "mouseenter", "mouseleave",
+            "mousemove", "mouseover", "mouseout", "contextmenu", "wheel",
+            "keydown", "keypress", "keyup",
+            "input", "change", "submit", "focus", "blur", "focusin", "focusout",
+            "reset", "invalid",
+            "load", "unload", "beforeunload", "resize", "scroll", "error",
+            "copy", "cut", "paste",
+            "drag", "dragstart", "dragend", "dragenter", "dragleave", "dragover", "drop",
+            "play", "pause", "ended", "volumechange", "timeupdate", "seeking", "seeked",
+            "progress", "canplay",
+            "online", "offline", "fetch", "message",
+            "touchstart", "touchmove", "touchend", "touchcancel",
+            "animationstart", "animationend", "animationiteration",
+            "transitionstart", "transitionend",
+            "pointerdown", "pointerup", "pointermove", "pointerenter", "pointerleave",
+            "gotpointercapture", "lostpointercapture"
+        ];
+
         // // Añadir el listener a cada evento en el documento
         // eventos.forEach(eventType => {
         //     document.addEventListener(eventType, manejarEvento, true); // true para la fase de captura
@@ -100,11 +126,30 @@
         //para asociarlo a cada uno hay que recorrer el arrar de elementos
         divs.forEach(div => {
             div.addEventListener("mouseover", cambiaColor);
-           ;
+            eventos.forEach(eventType => {
+                div.addEventListener(eventType, manejarEvento, true); // true para la fase de captura
+            });
 
         });
-       
+        eventos.forEach(eventType => {
+            document.getElementById("hola").addEventListener(eventType, manejarEvento, true); // true para la fase de captura
+        });
 
+
+        setInterval(() => {
+            document.getElementById("veloc").textContent = 0;
+        }, 100);
+
+
+
+        // Función para manejar todos los eventos
+        function manejarEvento(event) {
+            document.getElementById("contar").textContent++;
+            document.getElementById("veloc").textContent++;
+            if (event.type === "click") alert("has hecho click");
+            //if (event.target.id==="5") alert ("cuidaico con el parrafo 5")
+            console.log(`Evento capturado: ${event.type} en el elemento ${event.target.id}`, event);
+        }
 
 
 

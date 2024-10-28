@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Ejercicio Simple de Eventos de Teclado</title>
+     <style>
+          body {
+               font-family: Arial, sans-serif;
+               text-align: center;
+          }
+
+          #personaje {
+               position: relative;
+               width: 50px;
+               height: 50px;
+               background-color: blue;
+               margin-top: 20px;
+               transition: 0.2s ease-out;
+          }
+     </style>
+</head>
+
+<body>
+     <h2>Mueve el Personaje con las Teclas de Flecha</h2>
+     <div id="personaje"></div>
+
+     <script>
+
+          //mi solución
+
+          document.addEventListener("keydown", mueve);
+
+
+          function mueve(event) {
+               let posx = parseInt(window.getComputedStyle(personaje).left, 10), posy= parseInt(window.getComputedStyle(personaje).top, 10);
+
+               console.log (personaje.style.left +"<-    ->"+personaje.style.top)
+               if (event.type === "keydown") {
+
+                    personaje.style.backgroundColor = "Blue"
+                    switch (event.keyCode) {
+                         case 37:
+                              if (posx >= 5) posx -= 5;
+                              console.log ("izquierda");
+                              break;
+
+                         case 38:
+                              if (posy >= 5) posy -= 5;
+                              console.log ("arriba")
+                              break;
+
+                         case 39:
+                              posx += 5;
+                              console.log ("derecha")
+                              break;
+                         case 40:
+                         if (posy < 1200)posy += 5;
+                              console.log("abajo")
+                              break;
+                         default: //pongo el cuadrado rojo
+                              personaje.style.backgroundColor = "Red"
+
+                    }
+
+                    personaje.style.left=`${posx}px`;
+                    personaje.style.top=`${posy}px`;
+
+                    console.log (personaje.style.left +"    "+personaje.style.top)
+
+
+
+               }
+
+
+          }
+
+
+
+
+
+          const personaje = document.getElementById('personaje');
+
+     </script>
+</body>
+
+</html>
