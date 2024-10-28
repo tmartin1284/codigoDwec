@@ -9,26 +9,49 @@
 </head>
 
 <body>
-    <div class="parrafo">
+    <div class="parrafo" id="1">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
         laborum.
     </div>
-    <div class="parrafo">
+    <div class="parrafo"id="2">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
         laborum.
     </div>
-    <div class="parrafo">
+    <div class="parrafo"id="3">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
         laborum.
+    </div><div class="parrafo"id="4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+    </div>
+    <div class="parrafo"id="5">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+    </div>
+    <div class="parrafo"id="6">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+    </div>
+    <div id="lista">
+        
     </div>
 
     <script>
@@ -55,12 +78,36 @@
             this.style.backgroundColor = `rgb(${color[0]},${color[1]},${color[2]})`;
         }
 
+        
+
         //Así sólo podemos asociar la función a un solo elemento, 
         //divs.addEventListener("mouseover", cambiaColor);
+
+
+
+        const eventos = [
+    'click', 'dblclick', 'mousedown', 'mouseup', 'mouseover', 'mouseout', 'mousemove',
+    'keydown', 'keypress', 'keyup', 'focus', 'blur', 'change', 'submit', 'input',
+    'scroll', 'resize', 'load', 'unload', 'contextmenu'
+];
+
+// Función para manejar todos los eventos
+function manejarEvento(event) {
+    console.log(`Evento capturado: ${event.type} en el elemento ${event.target.id}`, event);
+}
+
+// Añadir el listener a cada evento en el documento
+eventos.forEach(eventType => {
+    document.addEventListener(eventType, manejarEvento, true); // true para la fase de captura
+});
+
+
+
 
         //para asociarlo a cada uno hay que recorrer el arrar de elementos
         divs.forEach(div => {
             div.addEventListener("mouseover", cambiaColor);
+           
         });
 
 
