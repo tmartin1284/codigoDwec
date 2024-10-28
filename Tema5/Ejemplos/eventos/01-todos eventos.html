@@ -126,13 +126,11 @@
         //para asociarlo a cada uno hay que recorrer el arrar de elementos
         divs.forEach(div => {
             div.addEventListener("mouseover", cambiaColor);
-            eventos.forEach(eventType => {
-                div.addEventListener(eventType, manejarEvento, true); // true para la fase de captura
-            });
+           
 
         });
         eventos.forEach(eventType => {
-            document.getElementById("hola").addEventListener(eventType, manejarEvento, true); // true para la fase de captura
+            document.addEventListener(eventType, manejarEvento, true); // true para la fase de captura
         });
 
 
