@@ -41,11 +41,14 @@
           /**
            * 
            * vamos a hacer un bosu. el juego este en el que aparece un cuadrado en la pantalla, y si le haces clik te da puntos
+           * 
+           * los cuadros aleatorios ya estann hechos... solo os queda por gestionar los eventos
+           * 
 
            */
 
 
-          //primero pintamos aleatoriamente el azul y el verde
+          
 
           const verde = document.getElementById("verde"), azul = document.getElementById("azul"), contador = document.getElementById("contador");
 
@@ -67,28 +70,9 @@
           }, 400);
           
 
-          document.addEventListener("click", puntos);
-
-
-          function puntos(event) {
-
-               let puntos = parseInt(contador.textContent);
-
-               if (event.target.id === "azul")
-                    puntos += 2;
-
-               if (event.target.id === "verde")
-                    puntos += 5;
-
-               contador.textContent = puntos;
-
-          }
 
 
 
-
-
-          const personaje = document.getElementById('personaje');
 
      </script>
 </body>
