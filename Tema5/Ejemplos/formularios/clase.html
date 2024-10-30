@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+     <title>Title</title>
+     <!-- Required meta tags -->
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+     <!-- Bootstrap CSS v5.2.1 -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+     <link rel="stylesheet" href="./clase.css">
+</head>
+
+<body>
+     <header>
+          <!-- place navbar here -->
+     </header>
+     <main>
+
+          <h1>Formulario de recogida de datos</h1>
+          <form id="contactForm" class="needs-validation">
+               <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" class="form-control" id="name" name="name">
+                    <div class="error-message">El nombre es obligatorio y debe tener al menos 2 caracteres.</div>
+               </div>
+               <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                    <div class="error-message">Por favor, proporciona una dirección de correo electrónico válida.</div>
+               </div>
+               <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                    <div class="error-message">La contraseña es obligatoria y debe tener al menos 6 caracteres.</div>
+               </div>
+               <div class="form-group">
+                    <label for="passwordchek" class="form-control">Comprobación contraseña</label>
+                    <input type="password" class="form-control" id="passwordchek">
+                    <div class="error-message">La contraseña debe coincidir con la comprobación de la contraseña.</div>
+               </div>
+               <div class="form-group">
+                    <input type="checkbox" class="form-check-input" id="Check1">
+                    <label class="form-check-label" for="Check1">Marcarme si estas de acuerdo en vender tu alma al diablo</label>
+                    <div class="error-message">Debes aceptar todo.</div>
+               </div>
+               <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+
+
+
+
+     </main>
+     <footer>
+          <!-- place footer here -->
+     </footer>
+     <!-- Bootstrap JavaScript Libraries -->
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+          integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+          crossorigin="anonymous"></script>
+     <script src="./clase.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+          integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+          crossorigin="anonymous"></script>
+</body>
+
+</html>

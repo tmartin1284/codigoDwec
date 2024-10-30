@@ -14,7 +14,7 @@
           body.bodypress {
                font-family: Arial, sans-serif;
                text-align: center;
-               background-color:red;
+               background-color: red;
           }
 
           #azul {
@@ -55,7 +55,7 @@
 
           const verde = document.getElementById("verde"), azul = document.getElementById("azul"), contador = document.getElementById("contador");
 
-     
+         
 
 
 
@@ -63,19 +63,22 @@
                azul.style.top = `${Math.round(Math.random() * 550)}px`;
                azul.style.left = `${Math.round(Math.random() * 1200)}px`;
           }, 800);
-          
+
 
           setInterval(() => {
                verde.style.top = `${Math.round(Math.random() * 550)}px`;
                verde.style.left = `${Math.round(Math.random() * 1200)}px`;
-          }, 400);
-          
+          },  400);
+
 
           document.addEventListener("click", puntos);
-          document.addEventListener("mouseup", ()=> {
-               console.log("fasd")
-               document.body.classList.remove("bodypress")});
+          document.addEventListener("mousemove", () => {
+               
+               document.body.classList.remove("bodypress")
+          });
 
+         
+          
 
           function puntos(event) {
 
@@ -86,9 +89,10 @@
 
                if (event.target.id === "verde")
                     puntos += 5;
-console.log(event.target.tagName)
+               
+                    
                if (event.target.tagName !== "body")
-               document.body.classList.add("bodypress");
+                    document.body.classList.add("bodypress");
 
                contador.textContent = puntos;
 
