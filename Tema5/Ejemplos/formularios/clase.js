@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Esta bandera se inicializa como true.
     // En caso de encontrar un error en un campo, esta variable se convierte en false.
     var isValid = true;
+    console.log ("entra a validar");
 
     // Lógica de validación personalizada
     // Ejemplo de validación personalizada solo comprobando la longitud 
@@ -50,11 +51,13 @@ document.addEventListener('DOMContentLoaded', function () {
       markFieldAsValid(email);
     }
 
-    if (password.value != passwordck.value ) {
+    if (password.value !== passwordck.value ) {
             markFieldAsNotValid(passwordck);
+            markFieldAsNotValid(password);
       isValid = false;
     } else {
          markFieldAsValid(passwordck);
+         markFieldAsValid(password);
     }
 
 
@@ -69,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
       markFieldAsValid(passwordck);
     }
 
-    if (acceptall.value) {
+    if (!acceptall.value) {
       markFieldAsNotValid(acceptall, "debes marcar esta casilla si o si");
       isValid = false;
     } else {
@@ -107,4 +110,5 @@ function markFieldAsNotValid(element, message) {
 // Esta función marca un campo como válido y oculta el mensaje de error
 function markFieldAsValid(element) {
   element.parentNode.classList.remove("is-not-valid-field");
+  element.parentNode.querySelector(".error-message").textContent = "";
 }
