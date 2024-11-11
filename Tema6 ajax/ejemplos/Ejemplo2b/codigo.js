@@ -8,7 +8,7 @@
  */
 
 
-fetch('http://www.ies-azarquiel.es/paco/apikl/team')
+fetch('http://www.ies-azarquiel.es/paco/apikl/teams/4')
   .then(response => {
     console.log(response.status)
     return response.json();
