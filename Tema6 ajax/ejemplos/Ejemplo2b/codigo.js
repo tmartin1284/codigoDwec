@@ -8,8 +8,9 @@
  */
 
 
-fetch('./data/team.json')
+fetch('http://www.ies-azarquiel.es/paco/apikl/team')
   .then(response => {
+    console.log(response.status)
     return response.json();
   })
   .then(jsondata => procesarJSON(jsondata))
