@@ -1,0 +1,16 @@
+GET http://localhost:3000/posts HTTP/1.1
+
+###
+
+GET http://localhost:3000/posts/7 HTTP/1.1
+
+###
+
+POST http://localhost:3000/posts HTTP/1.1
+content-type: application/json
+
+{
+    "id": "119",
+  "title": "Dani despierta",
+  "author": "Diego"
+  }
