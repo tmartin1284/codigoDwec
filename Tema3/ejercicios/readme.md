@@ -68,13 +68,13 @@
          6. Después de todo esto, mostraremos los cinco animales, llamando a su `toString()`.
    
   
-   3. La granja está compuesta por cuatro cuadras (una por cada tipo de animales), y un gallo. Cada cuadra tiene un número aleatorio de animales entre 5 y 10. Crea la granja utilizando el constructor *Object* o directamente con la notación literal (pero no hagas un constructor).
-   4. Inicializa los animales de las cuadras usando valores aleatorios (en el caso de los colores, podeis utilizar un switch). Imprimelos todos usando estructuras de control. Incluye el gallo que has creado antes.
-   5. Selecciona, mediante funciones de **lambda**, sobre cada array (cuadra).
+      3. La granja está compuesta por cuatro cuadras (una por cada tipo de animales), y un gallo. Cada cuadra tiene un número aleatorio de animales entre 5 y 10. Crea la granja utilizando el constructor *Object* o directamente con la notación literal (pero no hagas un constructor).
+      4. Inicializa los animales de las cuadras usando valores aleatorios (en el caso de los colores, podeis utilizar un switch). Imprimelos todos usando estructuras de control. Incluye el gallo que has creado antes.
+      5. Selecciona, mediante funciones de **lambda**, sobre cada array (cuadra).
          1. la oveja que más leche es capaz de dar (máximo de leche).
          2. el conejo con mayor índice de achuchabilidad.
          3. la gallina con más edad.
          4. la vaca con los cuernos más largos.
-   6. Guarda estos animales en un array de *AnimalesSelectos*. Imprimelo a través de las funciones `toString()` de los objetos.
-   7.  Serializa en JSON los *AnimalesSelectos*, e imprimelo también.
+      6. Guarda estos animales en un array de *AnimalesSelectos*. Imprimelo a través de las funciones `toString()` de los objetos.
+      7.  Serializa en JSON los *AnimalesSelectos*, e imprimelo también.
    
