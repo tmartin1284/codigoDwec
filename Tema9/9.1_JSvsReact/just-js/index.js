@@ -28,6 +28,7 @@ const btnWhyReact = document.getElementById("btn-why-react");
 const btnCoreFeature = document.getElementById("btn-core-features");
 const btnResources = document.getElementById("btn-resources");
 const tabContent = document.getElementById("tab-content");
+const tomas= document.getElementById("tab-content");
 
 function displayContent(items) {
   let listContent = "";
