@@ -5,6 +5,13 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [algo, setalgo] = useState("");
+
+  // Función para manejar cambios en el input
+  const patatas = (event) => {
+    setalgo(document.getElementById("tomas2").value);
+  };
+
 
   return (
     <>
@@ -21,6 +28,22 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+<div className="body" id="tomas1">
+
+<input  id="tomas2" type="text"   placeholder='escribe' />
+ <button id="tomas3" onClick={patatas}>pegame</button>
+Hola {algo}
+</div>
+
+{/* /** 
+<div className="field">
+Hello world
+<input tabIndex="1"/>
+<button onClick={fn}>
+Click me!
+</button>
+</div>
+*/ }
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
