@@ -9,7 +9,8 @@
     "lint": "eslint --fix src/**/*.{js,jsx}",
     "preview": "vite preview",
     "postinstall": "husky install",
-    "format": "prettier --write \"*.{js,jsx,json,css}\""
+    "format": "prettier --write \"*.{js,jsx,json,css}\"",
+    "prepare": "husky"
   },
   "dependencies": {
     "react": "^19.0.0",
@@ -31,9 +32,9 @@
     "prettier": "^3.4.2",
     "typescript-eslint": "^8.19.1",
     "vite": "^6.0.5"
-  }, 
+  },
   "prettier": {
-"trailingComma": "all",
-"singleQuote": true
-}
+    "trailingComma": "all",
+    "singleQuote": true
+  }
 }

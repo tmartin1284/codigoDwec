@@ -8,34 +8,6 @@ function App() {
 
   return (
     <>
-    
-  <div className="app">
-    <h1>My wishlist</h1>
-    <fieldset className="wish-input">
-      <legend className="wish-input__label">New wish</legend>
-      <input className="wish-input__field" placeholder="Enter your wish here" />
-    </fieldset>
-    <ul className="wish-list">
-      {wishes.map(({ done, text }, i) => (
-        <li
-          key={text}
-          className={classNames('wish-list__item', {
-            'wish-list__item--done': done,
-          })}
-        >
-          <input id={`wish${i}`} type="checkbox" checked={done} />
-          <label htmlFor={`wish${i}`}>{text}</label>
-        </li>
-      ))}
-    </ul>
-    <button type="button" className="wish-clear">
-      Archive done
-    </button>
-  </div>
-
-
-
-
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -61,3 +33,93 @@ function App() {
 }
 
 export default App
+
+
+
+/*
+const wishes = [
+  { done: false, text: 'Travel to the moon' },
+  { done: true, text: 'Make an intro course to React' },
+  { done: true, text: 'Pay the gym' },
+  { done: false, text: 'Go to the gym' },
+];
+const App = () => (
+  <div className="app">
+    <h1>My wishlist</h1>
+    <fieldset className="wish-input">
+      <legend className="wish-input__label">New wish</legend>
+      <input className="wish-input__field" placeholder="Enter your wish here" />
+    </fieldset>
+    <ul className="wish-list">
+      {wishes.map(({ done, text }, i) => (
+        <li
+          key={text}
+          className={classNames('wish-list__item', {
+            'wish-list__item--done': done,
+          })}
+        >
+          <input id={`wish${i}`} type="checkbox" checked={done} />
+          <label htmlFor={`wish${i}`}>{text}</label>
+        </li>
+      ))}
+    </ul>
+    <button type="button" className="wish-clear">
+      Archive done
+    </button>
+  </div>
+);
+
+
+
+
+
+
+
+
+
+const initialWishes = [
+  {
+    id: 0,
+    text: 'Travel to the moon',
+    completed: false,
+  },
+  {
+    id: 1,
+    text: 'Travel to Barcelona',
+    completed: true,
+  },
+  {
+    id: 2,
+    text: 'Eat a hamburger',
+    completed: false,
+  },
+];
+
+export default function App() {
+  const [wishes, setWishes] = useState(initialWishes);
+
+  const onNewWish = (newWish) => {
+    setWishes((currentWishes) => [...currentWishes, newWish]);
+  };
+
+  return (
+    <div className="app">
+      <h1>My Wishlist</h1>
+      <WishInput onNewWish={onNewWish} />
+      <WishList
+        wishes={wishes}
+        setWishes={setWishes}
+      />
+      <button
+        type="button"
+        className="wish-clear"
+        onClick={() => setWishes(wishes.filter((wish) => !wish.completed))}
+      >
+        Archive Wishes
+      </button>
+
+    </div>
+  );
+}
+
+**/
