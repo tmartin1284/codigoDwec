@@ -1,4 +1,4 @@
-# **EJ_8.1 Práctica de Análisis de Aplicaciones Web con Atomic Design**
+# **P9a Práctica de Análisis de Aplicaciones Web con Atomic Design**
 
 ## **Objetivo:**
 

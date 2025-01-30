@@ -1,4 +1,4 @@
-# **Mini Proyecto: Aplicación de Retroalimentación con Emojis**
+# **P9b. Aplicación de Retroalimentación con Emojis**
 
 ## **Descripción General**
 
