@@ -54,10 +54,7 @@ Para cada componente identificado, documenta lo siguiente:
 ### **Paso 4: Entregar tu Trabajo**
 
 - Prepara tu análisis en un informe en formato PDF.
-- Incluye capturas de pantalla o enlaces a los componentes específicos analizados.  
-
-
----
+- Incluye capturas de pantalla o enlaces a los componentes específicos analizados.
 
 ## **Criterios de Evaluación:**
 
